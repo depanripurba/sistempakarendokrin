@@ -1,9 +1,6 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 // Menggunakan Vendor PHPSpreadSheet
-require 'vendor/autoload.php';
-
-use PhpOffice\PhpSpreadsheet\IOFactory;
 
 class Admin extends CI_Controller
 {
