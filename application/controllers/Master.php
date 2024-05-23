@@ -70,13 +70,13 @@ class Master extends CI_Controller
 
 	public function tambahdatagejala()
 	{
+		$data['kode'] = $this->Gejala_model->getcode();
 		$data['aktif'] = 'datagejala';
 		$data['judul'] = 'Form Tambah Data Gejala';
-		// $data['kode_gejala'] = $this->Gejala_model->getNewGejala();
 		
 		$this->load->view('template/header',$data);
 		$this->load->view('template/sidebar', $data);
-		$this->load->view('admin/formtambahdatagejala');
+		$this->load->view('admin/formtambahdatagejala',$data);
 		$this->load->view('template/footer');
 	}
 

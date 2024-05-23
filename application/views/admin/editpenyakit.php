@@ -1,16 +1,3 @@
-<?php 
-
-$rendercode = substr($dataedit[0]->kode_penyakit,1)*1;
-$panjangkarakter = strlen($rendercode);
-if($panjangkarakter<=1){
-  $rendercode = "P0".$rendercode;
-}else{
-  $rendercode = "P".$rendercode;
-}
-
-
- ?>
-
 <div class="content-wrapper">
   <!-- batas -->
 
@@ -28,7 +15,7 @@ if($panjangkarakter<=1){
               <div class="card-body">
                 <div class="form-group">
                   <label for="kodepenyakit">Kode Penyakit</label>
-                  <input value="<?=$rendercode?>" disabled name="kode_penyakit" type="text" class="form-control" id="kodepenyakit" placeholder="Kode Penyakit">
+                  <input value="<?=$dataedit[0]->kode_penyakit?>" disabled name="kode_penyakit" type="text" class="form-control" id="kodepenyakit" placeholder="Kode Penyakit">
                   <input type="hidden" name="kode_penyakit" value="<?=$dataedit[0]->kode_penyakit?>">
                 </div>
                 <div class="form-group">
@@ -45,7 +32,7 @@ if($panjangkarakter<=1){
 
               <div class="card-footer">
                 <button type="submit" class="btn btn-success">Update Data Penyakit</button>
-                <a class="btn btn-secondary" href="<?=base_url('penyakit')?>">Batal/Kembali</a>
+                <a class="btn btn-secondary" href="<?=base_url('datapenyakit')?>">Batal/Kembali</a>
               </div>
             </form>
           </div>

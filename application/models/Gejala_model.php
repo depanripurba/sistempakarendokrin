@@ -39,4 +39,41 @@ class Gejala_model extends CI_Model {
         // Mengembalikan jumlah baris yang terpengaruh oleh operasi penghapusan
         return $this->db->affected_rows();
 	}
+    public function getcode()
+	{
+		return $this->depalgoritma('G00');
+	}
+    private function depalgoritma($partone)
+	{
+		$datagejala = $this->db->get('tbl_gejala');
+		$result = count($datagejala->result());
+
+		$bigkode = 0;
+		if ($datagejala->result() != null) {
+			$bigkode = $datagejala->result()[$result - 1]->kode_gejala;
+			$bigkode = substr($bigkode, 1) * 1;
+		}
+		$ceking = 1;
+		$partend = "";
+		$partone = $partone;
+		foreach ($datagejala->result() as $value) {
+			$substrak = substr($value->kode_gejala, 1) * 1;
+			if ($substrak === $ceking) {
+			} else {
+				$partend = $ceking;
+				continue;
+			}
+			$ceking++;
+		}
+		if ($partend === "") {
+			$partend = $bigkode + 1;
+		}
+		$KODEKER = $partone . $partend;
+		$PANJANGKODE = strlen($KODEKER);
+		if ($PANJANGKODE > 4) {
+			$KODEKER = "G0" . $partend;
+		}
+
+		return $KODEKER;
+	}
 }

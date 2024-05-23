@@ -40,16 +40,7 @@
             <?php foreach ($penyakit['penyakit'] as $data) : ?>
               <tr>
                 <td class="text-center"><?= $nomor ?></td>
-                <?php
-                $rendercode = substr($data->kode_penyakit, 1) * 1;
-                $panjangkarakter = strlen($rendercode);
-                if ($panjangkarakter <= 1) {
-                  $rendercode = "P0" . $rendercode;
-                } else {
-                  $rendercode = "P" . $rendercode;
-                }
-                ?>
-                <td><?= $rendercode ?></td>
+                <td><?= $data->kode_penyakit ?></td>
                 <td><?= $data->nama_penyakit ?></td>
                 <td><?= $data->solusi ?></td>
                 <td class="text-center">

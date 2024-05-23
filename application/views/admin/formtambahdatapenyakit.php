@@ -1,15 +1,3 @@
-<?php 
-$rendercode = substr($kode,1)*1;
-$panjangkarakter = strlen($rendercode);
-if($panjangkarakter<=1){
-  $rendercode = "P0".$rendercode;
-}else{
-  $rendercode = "P".$rendercode;
-}
-
-
- ?>
-
 <div class="content-wrapper">
   <!-- batas -->
 
@@ -27,8 +15,8 @@ if($panjangkarakter<=1){
               <div class="card-body">
                 <div class="form-group">
                   <label for="kode_penyakit">Kode Penyakit</label>
-                  <input value="<?=$rendercode?>" disabled="" name="kode_penyakit" type="text" class="form-control" id="kodepenyakit" placeholder="Kode Penyakit">
-                  <input type="hidden" name="kode_penyakit" value="<?=$rendercode?>">
+                  <input value="<?=$kode?>" disabled="" name="kode_penyakit" type="text" class="form-control" id="kodepenyakit" placeholder="Kode Penyakit">
+                  <input type="hidden" name="kode_penyakit" value="<?=$kode?>">
                 </div>
                 <div class="form-group">
                   <label for="namagejala">Nama Penyakit</label>
