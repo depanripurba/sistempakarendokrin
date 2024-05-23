@@ -44,7 +44,6 @@
                                 <a class="btn btn-danger" onclick="alert('Yakin Ingin Menghapus Data ini?')"
                                     href="<?=site_url('Master/deleteGejala/'.$item['kode_gejala'])?>">Delete</a>
                             </td>
-                            td
                         </tr>
                         <?php endforeach; ?>
                     </tbody>
