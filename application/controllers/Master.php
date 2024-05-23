@@ -11,6 +11,7 @@ class Master extends CI_Controller
 		if (!$this->session->userdata('username')) {
 			redirect('auth');
 		}
+		$this->load->model('Penyakit_model');
 		// Load Model
 	}
 	public function index()
@@ -40,11 +41,12 @@ class Master extends CI_Controller
 	}
 	public function datapenyakit()
 	{
+		$data['penyakit'] = $this->Penyakit_model->getAllData();
 		$data['aktif'] = 'datapenyakit';
 		$data['judul'] = 'Data Penyakit';
 		$this->load->view('template/header',$data);
 		$this->load->view('template/sidebar', $data);
-		$this->load->view('admin/datapenyakit');
+		$this->load->view('admin/datapenyakit',$data);
 		$this->load->view('template/footer');
 	}
 	public function basispengetahuan()
@@ -77,6 +79,7 @@ class Master extends CI_Controller
 	}
 	public function tambahdatapenyakit()
 	{
+		$data['kode'] = $this->Penyakit_model->getcode();
 		$data['aktif'] = 'datapenyakit';
 		$data['judul'] = 'Form Tambah Data Penyakit';
 		$this->load->view('template/header',$data);
@@ -84,5 +87,47 @@ class Master extends CI_Controller
 		$this->load->view('admin/formtambahdatapenyakit');
 		$this->load->view('template/footer');
 	}
+
+	public function addpenyakit()
+	{
+		$kodepenyakit = $_POST['kode_penyakit'];
+		$namapenyakit = $_POST['nama_penyakit'];
+		$solusi = $_POST['solusi'];
+		$tambahpenyakitbaru = $this->Penyakit_model->insertData($kodepenyakit, $namapenyakit, $solusi);
+		if ($tambahpenyakitbaru) {
+			$this->session->set_flashdata('berhasil', 'Data Penyakit '.$_POST['kode_penyakit'].' berhasil ditambahkan ke dalam database');
+			redirect(base_url('datapenyakit'));
+		}
+	}
+
+	public function editpenyakit($id)
+	{
+		$data['dataedit'] = $this->Penyakit_model->ambildata($id);
+		$data['judul'] = 'Form Edit Penyakit';
+		$data['aktif'] = 'datapenyakit';
+		$this->load->view('template/header',$data);
+		$this->load->view('template/sidebar', $data);
+		$this->load->view('admin/editpenyakit',$data);
+		$this->load->view('template/footer');
+	}
+
+	public function posteditpenyakit()
+	{
+		$cek = $this->Penyakit_model->updatedata();
+		if ($cek) {
+			$this->session->set_flashdata('berhasil', 'Data Penyakit '.$_POST['kode_penyakit'].' berhasil di update');
+			redirect(base_url('datapenyakit'));
+		}
+	}
+
+	public function hapuspenyakit($kodepenyakit)
+	{
+		$cek = $this->Penyakit_model->hapusdata($kodepenyakit);
+		if ($cek) {
+			$this->session->set_flashdata('deleted', 'berhasil dihapus');
+			redirect(base_url('datapenyakit'));
+		}
+	}
+	
 
 }

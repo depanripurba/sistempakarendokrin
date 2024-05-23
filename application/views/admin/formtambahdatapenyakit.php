@@ -1,3 +1,15 @@
+<?php 
+$rendercode = substr($kode,1)*1;
+$panjangkarakter = strlen($rendercode);
+if($panjangkarakter<=1){
+  $rendercode = "P0".$rendercode;
+}else{
+  $rendercode = "P".$rendercode;
+}
+
+
+ ?>
+
 <div class="content-wrapper">
   <!-- batas -->
 
@@ -11,16 +23,20 @@
             </div>
             <!-- /.card-header -->
             <!-- form start -->
-            <form method="POST" action="http://localhost/sistempakaryuni/GejalaController/tambahgejala">
+            <form method="POST" action="<?=base_url("addpenyakit")?>">
               <div class="card-body">
                 <div class="form-group">
-                  <label for="kodegejala">Kode Penyakit</label>
-                  <input value="G01" disabled="" name="kode_penyakit" type="text" class="form-control" id="kodegejala" placeholder="Kode Penyakit">
-                  <input type="hidden" name="kode_gejala" value="G001">
+                  <label for="kode_penyakit">Kode Penyakit</label>
+                  <input value="<?=$rendercode?>" disabled="" name="kode_penyakit" type="text" class="form-control" id="kodepenyakit" placeholder="Kode Penyakit">
+                  <input type="hidden" name="kode_penyakit" value="<?=$rendercode?>">
                 </div>
                 <div class="form-group">
                   <label for="namagejala">Nama Penyakit</label>
-                  <input name="nama_gejala" type="text" class="form-control" id="namagejala" placeholder="Nama gejala...">
+                  <input name="nama_penyakit" type="text" class="form-control" id="namapenyakit" placeholder="Nama Penyakit...">
+                </div>
+                <div class="form-group">
+                  <label for="solusi">Solusi</label>
+                 <textarea name="solusi" id="solusi" class="form-control" cols="30" rows="5"></textarea>
                 </div>
             
               </div>
@@ -28,7 +44,7 @@
 
               <div class="card-footer">
                 <button type="submit" class="btn btn-primary">Tambahkan</button>
-                <a href="http://localhost/sistempakaryuni/gejala" class="btn btn-secondary">Batal/Kembali</a>
+                <a href="<?=base_url("datapenyakit")?>" class="btn btn-secondary">Batal/Kembali</a>
               </div>
             </form>
           </div>
