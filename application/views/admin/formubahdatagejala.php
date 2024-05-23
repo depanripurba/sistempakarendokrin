@@ -11,25 +11,22 @@
                 </div>
                 <!-- /.card-header -->
                 <!-- form start -->
-                <?php
-								// var_dump($kode_gejala->kode_gejala);
-								?>
-                <form method="POST" action="<?=base_url('Master/addGejala')?>">
+                <form method="POST" action="<?=base_url('Master/edtGejala')?>">
                     <div class="card-body">
                         <div class="form-group">
                             <label for="kode_gejala">Kode Gejala</label>
-                            <input type="text" name="kode_gejala" id="kode_gejala" class="form-control"
-                                placeholder="kode_gejala">
-                            <!-- <input type="hidden" name="kode_gejala" id="kode_gejala" value="G01"> -->
+                            <input type="text" disabled class="form-control" value="<?=$selected['kode_gejala']?>">
+                            <input type="hidden" name="kode_gejala" id="kode_gejala"
+                                value="<?=$selected['kode_gejala']?>">
                         </div>
                         <div class="form-group">
                             <label for="nama_gejala">Nama Gejala</label>
                             <input name="nama_gejala" type="text" class="form-control" id="nama_gejala"
-                                placeholder="Nama Gejala">
+                                placeholder="Nama Gejala" value="<?=$selected['nama_gejala']?>">
                         </div>
                     </div>
                     <div class="card-footer">
-                        <button type="submit" class="btn btn-primary">Tambahkan</button>
+                        <button type="submit" class="btn btn-info">Ubah</button>
                         <a href="<?=base_url('/datagejala')?>" class="btn btn-secondary">Batal/Kembali</a>
                     </div>
                 </form>
