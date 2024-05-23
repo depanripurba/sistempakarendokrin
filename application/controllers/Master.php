@@ -16,7 +16,8 @@ class Master extends CI_Controller
 	public function index()
 	{
 		$data['aktif'] = 'home';
-		$this->load->view('template/header');
+		$data['judul'] = 'Halaman Home';
+		$this->load->view('template/header',$data);
 		$this->load->view('template/sidebar', $data);
 		$this->load->view('admin/dashboard');
 		$this->load->view('template/footer');
@@ -31,7 +32,8 @@ class Master extends CI_Controller
 	public function datagejala()
 	{
 		$data['aktif'] = 'datagejala';
-		$this->load->view('template/header');
+		$data['judul'] = 'Data Gejala';
+		$this->load->view('template/header',$data);
 		$this->load->view('template/sidebar', $data);
 		$this->load->view('admin/datagejala');
 		$this->load->view('template/footer');
@@ -39,7 +41,8 @@ class Master extends CI_Controller
 	public function datapenyakit()
 	{
 		$data['aktif'] = 'datapenyakit';
-		$this->load->view('template/header');
+		$data['judul'] = 'Data Penyakit';
+		$this->load->view('template/header',$data);
 		$this->load->view('template/sidebar', $data);
 		$this->load->view('admin/datapenyakit');
 		$this->load->view('template/footer');
@@ -47,7 +50,8 @@ class Master extends CI_Controller
 	public function basispengetahuan()
 	{
 		$data['aktif'] = 'basispengetahuan';
-		$this->load->view('template/header');
+		$data['judul'] = 'Basis Pengetahuan';
+		$this->load->view('template/header',$data);
 		$this->load->view('template/sidebar', $data);
 		$this->load->view('admin/basispengetahuan');
 		$this->load->view('template/footer');
@@ -55,9 +59,30 @@ class Master extends CI_Controller
 	public function datapasien()
 	{
 		$data['aktif'] = 'datapasien';
-		$this->load->view('template/header');
+		$data['judul'] = 'Data Pasien';
+		$this->load->view('template/header',$data);
 		$this->load->view('template/sidebar', $data);
 		$this->load->view('admin/datapasien');
 		$this->load->view('template/footer');
 	}
+
+	public function tambahdatagejala()
+	{
+		$data['aktif'] = 'datagejala';
+		$data['judul'] = 'Form Tambah Data Gejala';
+		$this->load->view('template/header',$data);
+		$this->load->view('template/sidebar', $data);
+		$this->load->view('admin/formtambahdatagejala');
+		$this->load->view('template/footer');
+	}
+	public function tambahdatapenyakit()
+	{
+		$data['aktif'] = 'datapenyakit';
+		$data['judul'] = 'Form Tambah Data Penyakit';
+		$this->load->view('template/header',$data);
+		$this->load->view('template/sidebar', $data);
+		$this->load->view('admin/formtambahdatapenyakit');
+		$this->load->view('template/footer');
+	}
+
 }
