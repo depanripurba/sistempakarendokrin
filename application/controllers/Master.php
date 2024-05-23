@@ -18,7 +18,7 @@ class Master extends CI_Controller
 	public function index()
 	{
 		$data['aktif'] = 'home';
-		$data['judul'] = 'Halaman Home';
+		$data['judul'] = 'SP Theorema Bayes Endokrin - Dashboard';
 		$this->load->view('template/header',$data);
 		$this->load->view('template/sidebar', $data);
 		$this->load->view('admin/dashboard');
@@ -26,21 +26,17 @@ class Master extends CI_Controller
 		// }
 	}
 
-	public function login()
-	{
-		$this->load->view('admin/login');
-	}
-
 	public function datagejala()
 	{
 		$data['aktif'] = 'datagejala';
-		$data['judul'] = 'Data Gejala';
+		$data['judul'] = 'SP Theorema Bayes Endokrin - Data Gejala';
 		$data['gejala'] = $this->Gejala_model->getAllGejala();
 		$this->load->view('template/header',$data);
 		$this->load->view('template/sidebar', $data);
 		$this->load->view('admin/datagejala',$data);
 		$this->load->view('template/footer');
 	}
+
 	public function datapenyakit()
 	{
 		$data['penyakit'] = $this->Penyakit_model->getAllData();

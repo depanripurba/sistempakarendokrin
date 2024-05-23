@@ -12,13 +12,19 @@ class Auth extends CI_Controller
 
 	public function index()
 	{
+		$data['judul'] = 'SP Theorema Bayes Endokrin - Login';
+
+		// Jika tidak ada user yang berhasil login, kembalikan ke halaman login
+		if ($this->session->userdata('username')) {
+			redirect('dashboard');
+		}
 
 		// Rules Validation
 		$this->form_validation->set_rules('username', 'Username', 'required|trim');
 		$this->form_validation->set_rules('password', 'Password', 'required|trim');
 
 		if ($this->form_validation->run() == false) {
-			$this->load->view('admin/login');
+			$this->load->view('admin/login',$data);
 		} else {
 			$this->_login();
 		}
@@ -43,7 +49,7 @@ class Auth extends CI_Controller
 					'role' => $login['role']
 				];
 				$this->session->set_userdata($data);
-				redirect('');
+			redirect('master/index');
 			} else {
 				// Jika Password Salah
 				$this->session->set_flashdata('message', '

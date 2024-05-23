@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Loding Administrator</title>
+    <title><?=$judul?></title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="<?=base_url('assets')?>/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="<?=base_url('assets')?>/dist/css/adminlte.min.css">
+	<!-- Icon -->
+	<link rel="shortcut icon" href="<?=base_url('assets/img/logo.png')?>" type="image/x-icon">
 </head>
 
 <body class="hold-transition login-page">
@@ -25,8 +27,6 @@
                 <a href="<?=base_url()?>"><img src="<?=base_url('assets/dist/img/logo.jpg')?>" width="200" alt=""></a>
             </div>
             <div class="card-body">
-                <p class="login-box-msg">Sign in to start your session</p>
-
                 <form action="<?=base_url("auth")?>" method="post">
                     <?=$this->session->flashdata('message');?>
                     <div class="input-group mb-3">

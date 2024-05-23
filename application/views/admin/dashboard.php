@@ -2,7 +2,3 @@
   <!-- batas -->
 
   <p>Dashboard</p>
-   
-
-
-      
