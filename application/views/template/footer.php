@@ -47,6 +47,21 @@
 <!-- AdminLTE for demo purposes -->
 
 <script>
+  let hapusdata = document.querySelectorAll('#hapusdata');
+  let baseurl = document.querySelector('#baseurl');
+  hapusdata.forEach((a) => {
+    a.addEventListener('click', (a) => {
+      let url = a.target.getAttribute('data-url');
+      let tes = confirm("yakin menghapus ?")
+      if(tes===true){
+        document.location.href = url
+      }else{
+        return null
+      }
+
+    })
+  })
+
   $(function() {
     $("#example1").DataTable({
       "responsive": true,
@@ -65,6 +80,10 @@
     });
   });
 </script>
+
+<!-- skrip hapus -->
+
+<!-- end skrip hapus -->
 </body>
 
 </html>

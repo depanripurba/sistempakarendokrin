@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 23 Bulan Mei 2024 pada 06.17
+-- Waktu pembuatan: 23 Bulan Mei 2024 pada 12.06
 -- Versi server: 10.4.28-MariaDB
 -- Versi PHP: 8.1.17
 
@@ -24,6 +24,26 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `tbl_gejala`
+--
+
+CREATE TABLE `tbl_gejala` (
+  `kode_gejala` varchar(4) NOT NULL,
+  `nama_gejala` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `tbl_gejala`
+--
+
+INSERT INTO `tbl_gejala` (`kode_gejala`, `nama_gejala`) VALUES
+('G02', 'ini benar'),
+('G04', 'Depanri'),
+('G03', 'tesdafasdfasfa');
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `tbl_login`
 --
 
@@ -40,6 +60,28 @@ CREATE TABLE `tbl_login` (
 
 INSERT INTO `tbl_login` (`id`, `username`, `password`, `role`) VALUES
 (1, 'admin', '$2y$10$l6DTnLT9rK5Xjb2d8.Zu7e.uyhrl2h6YuGvZkdkOQr3o.bzMQTqd.', 'Admin');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tbl_penyakit`
+--
+
+CREATE TABLE `tbl_penyakit` (
+  `kode_penyakit` varchar(30) NOT NULL,
+  `nama_penyakit` varchar(35) NOT NULL,
+  `solusi` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `tbl_penyakit`
+--
+
+INSERT INTO `tbl_penyakit` (`kode_penyakit`, `nama_penyakit`, `solusi`) VALUES
+('P01', 'penyakit1', 'tes bary'),
+('P02', 'penyakit 2', 'ini sudah benar'),
+('P03', 'asdfasdf', 'asdfasdf'),
+('P04', 'asdfasdf', 'asdfasdfa');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

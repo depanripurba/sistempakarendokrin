@@ -62,3 +62,7 @@ $route['datapasien'] = 'master/datapasien';
 $route['tambahdatagejala'] = 'master/tambahdatagejala';
 $route['tambahdatapenyakit'] = 'master/tambahdatapenyakit';
 $route['tambahbasispengetahuan'] = 'master/tambahbasispengetahuan';
+$route['addpenyakit'] = 'master/addpenyakit';
+$route['editpenyakit/(:any)'] = 'master/editpenyakit/$1';
+$route['posteditpenyakit'] = 'master/posteditpenyakit';
+$route['hapuspenyakit/(:any)'] = 'master/hapuspenyakit/$1';
