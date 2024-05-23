@@ -1,106 +1,99 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Auth extends CI_Controller {
+class Auth extends CI_Controller
+{
 
-	public function __construct(){
+	public function __construct()
+	{
 		parent::__construct();
 		$this->load->library('form_validation');
 	}
 
-	public function index(){
+	public function index()
+	{
 
 		// Rules Validation
-		$this->form_validation->set_rules('username','Username','required|trim');
-		$this->form_validation->set_rules('password','Password','required|trim');
+		$this->form_validation->set_rules('username', 'Username', 'required|trim');
+		$this->form_validation->set_rules('password', 'Password', 'required|trim');
 
-		if($this->form_validation->run() == false){
+		if ($this->form_validation->run() == false) {
 			$this->load->view('admin/login');
-		}else{
+		} else {
 			$this->_login();
 		}
 	}
 
-	private function _login(){
+	private function _login()
+	{
 		$username = $this->input->post('username');
 		$password = $this->input->post('password');
 
 		// Query User
-		$login = $this->db->get_where('tbl_login', ['username'=>$username])->row_array();
+		$login = $this->db->get_where('tbl_login', ['username' => $username])->row_array();
 
 		// Check Data Login (Terdaftar / Tidak di dalam database)
-		if($login){
+		if ($login) {
 			// Jika Terdaftar (Ada)
 			// Check Password
-			if(password_verify($password, $login['password']))
-			{
+			if (password_verify($password, $login['password'])) {
 				// Jika Password Benar
 				$data = [
-					'username'=>$login['username'],
-					'role'=>$login['role']
+					'username' => $login['username'],
+					'role' => $login['role']
 				];
 				$this->session->set_userdata($data);
-				redirect('admin');
-			}else{
+				redirect('');
+			} else {
 				// Jika Password Salah
-				$this->session->set_flashdata('message','
-					<div class="alert alert-danger alert-dismissible text-white" role="alert">
-						<span class="text-sm"><a href="javascript:;" class="alert-link text-white">Peringatan!</a> Password Salah</span>
-						<button type="button" class="btn-close text-lg py-3 opacity-10" data-bs-dismiss="alert" aria-label="Close">
-							<span aria-hidden="true">×</span>
-						</button>
-					</div>
+				$this->session->set_flashdata('message', '
+				<div class="alert alert-danger" role="alert">
+				Password Salah
+			  </div>
 				');
-			redirect('auth');
+				redirect('auth');
 			}
-		}else{
+		} else {
 			// Jika Tidak Terdaftar (Tidak Ada)
-			$this->session->set_flashdata('message','
-				<div class="alert alert-danger alert-dismissible text-white" role="alert">
-					<span class="text-sm"><a href="javascript:;" class="alert-link text-white">Peringatan!</a> Username Tidak terdaftar</span>
-					<button type="button" class="btn-close text-lg py-3 opacity-10" data-bs-dismiss="alert" aria-label="Close">
-						<span aria-hidden="true">×</span>
-					</button>
-				</div>
+			$this->session->set_flashdata('message', '
+			<div class="alert alert-danger" role="alert">
+			Username Tidak Terdaftar
+		  </div>
 			');
 			redirect('auth');
 		}
-
-		var_dump($login);
-		die;
 	}
-	
-	public function regist(){
+
+	public function regist()
+	{
 
 		// Rules Validation
-		$this->form_validation->set_rules('username','Username','required|trim');
-		$this->form_validation->set_rules('password','Password','required|trim');
+		$this->form_validation->set_rules('username', 'Username', 'required|trim');
+		$this->form_validation->set_rules('password', 'Password', 'required|trim');
 
-		if($this->form_validation->run() == false){
+		if ($this->form_validation->run() == false) {
 			$this->load->view('admin/login');
-		}else{
+		} else {
 
 			$data = [
-				'username'=>$this->input->post('username'),
-				'password'=>password_hash($this->input->post('password'),PASSWORD_DEFAULT),
-				'role'=>'Admin'
+				'username' => $this->input->post('username'),
+				'password' => password_hash($this->input->post('password'), PASSWORD_DEFAULT),
+				'role' => 'Admin'
 			];
 			redirect('admin');
 		}
 	}
 
-	public function logout(){
+	public function logout()
+	{
 		$this->session->unset_userdata('username');
 		$this->session->unset_userdata('role');
 
 		// Flash
-		$this->session->set_flashdata('message','
-			<div class="alert alert-success alert-dismissible text-white" role="alert">
-				<span class="text-sm">Anda Telah <a href="javascript:;" class="alert-link text-white">Logout!</a></span>
-				<button type="button" class="btn-close text-lg py-3 opacity-10" data-bs-dismiss="alert" aria-label="Close">
-					<span aria-hidden="true">×</span>
-				</button>
-			</div>
+		$this->session->set_flashdata('message', '
+		<div class="alert alert-danger" role="alert">
+		Anda Telah Log out, sesi berakhir
+	  </div>
 		');
 		redirect('auth');
 	}

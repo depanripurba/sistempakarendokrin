@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | Log in (v2)</title>
+    <title>Loding Administrator</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
@@ -18,43 +18,40 @@
 </head>
 
 <body class="hold-transition login-page">
-    <div class="login-box" style="width: 600px">
+    <div class="login-box">
         <!-- /.login-logo -->
         <div class="card card-outline card-primary">
             <div class="card-header text-center">
+                <a href="<?=base_url()?>"><img src="<?=base_url('assets/dist/img/logo.jpg')?>" width="200" alt=""></a>
             </div>
             <div class="card-body">
-                <div class="row">
-                    <div class="col-md-6">
-                    </div>
-                    <div class="col-md-6">
-                        <form action="../../index3.html" method="post">
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="Username">
-                                <div class="input-group-append">
-                                    <div class="input-group-text">
-                                        <span class="fas fa-user"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="input-group mb-3">
-                                <input type="password" class="form-control" placeholder="Password">
-                                <div class="input-group-append">
-                                    <div class="input-group-text">
-                                        <span class="fas fa-lock"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <!-- /.col -->
-                                <div class="col-4">
-                                    <button type="submit" class="btn btn-primary btn-block">Login</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+                <p class="login-box-msg">Sign in to start your session</p>
 
+                <form action="<?=base_url("auth")?>" method="post">
+                    <?=$this->session->flashdata('message');?>
+                    <div class="input-group mb-3">
+                        <input name="username" type="text" class="form-control" placeholder="Username">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-envelope"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input name="password" type="password" class="form-control" placeholder="Password">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <button type="submit" class="btn btn-primary btn-block">Login</button>
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                </form>
             </div>
             <!-- /.card-body -->
         </div>
