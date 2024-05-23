@@ -21,6 +21,7 @@
     <div class="card">
               <div class="card-header">
                 <h3 class="card-title">Data Gejala</h3>
+                <a class="btn btn-success mx-3" href="<?= base_url('tambahdatagejala') ?>">Tambah Data Gejala Baru</a>
               </div>
               <!-- /.card-header -->
               <div class="card-body">

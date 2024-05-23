@@ -1,3 +1,7 @@
+<div class="preloader flex-column justify-content-center align-items-center">
+    <img class="animation__shake" src="<?=base_url('assets/')?>dist/img/logo.jpg" alt="AdminLTELogo" height="60" >
+  </div>
+
 <nav class="main-header navbar navbar-expand navbar-white navbar-light">
   <!-- Left navbar links -->
   <ul class="navbar-nav">
