@@ -91,12 +91,9 @@ class Auth extends CI_Controller
 
 		// Flash
 		$this->session->set_flashdata('message', '
-			<div class="alert alert-success alert-dismissible text-white" role="alert">
-				<span class="text-sm">Anda Telah <a href="javascript:;" class="alert-link text-white">Logout!</a></span>
-				<button type="button" class="btn-close text-lg py-3 opacity-10" data-bs-dismiss="alert" aria-label="Close">
-					<span aria-hidden="true">×</span>
-				</button>
-			</div>
+		<div class="alert alert-danger" role="alert">
+		Anda Telah Log out, sesi berakhir
+	  </div>
 		');
 		redirect('auth');
 	}

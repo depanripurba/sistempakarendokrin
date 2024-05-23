@@ -36,4 +36,28 @@ class Master extends CI_Controller
 		$this->load->view('admin/datagejala');
 		$this->load->view('template/footer');
 	}
+	public function datapenyakit()
+	{
+		$data['aktif'] = 'datapenyakit';
+		$this->load->view('template/header');
+		$this->load->view('template/sidebar', $data);
+		$this->load->view('admin/datapenyakit');
+		$this->load->view('template/footer');
+	}
+	public function basispengetahuan()
+	{
+		$data['aktif'] = 'basispengetahuan';
+		$this->load->view('template/header');
+		$this->load->view('template/sidebar', $data);
+		$this->load->view('admin/basispengetahuan');
+		$this->load->view('template/footer');
+	}
+	public function datapasien()
+	{
+		$data['aktif'] = 'datapasien';
+		$this->load->view('template/header');
+		$this->load->view('template/sidebar', $data);
+		$this->load->view('admin/datapasien');
+		$this->load->view('template/footer');
+	}
 }

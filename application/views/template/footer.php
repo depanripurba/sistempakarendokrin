@@ -6,7 +6,7 @@
   <!-- Control sidebar content goes here -->
   <div class="p-3">
     <h5>Administrator</h5>
-    <a href="">logout</a>
+    <a href="<?=base_url('auth/logout')?>">logout</a>
   </div>
 </aside>
 <!-- /.control-sidebar -->
