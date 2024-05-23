@@ -174,7 +174,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="pages/calendar.html" class="nav-link">
+          <a href="pages/calendar.html" class="nav-link active">
             <i class="nav-icon fas fa-calendar-alt"></i>
             <p>
               Form Data Penyakit
