@@ -6,6 +6,6 @@
 	<title>Diagnosa</title>
 </head>
 <body>
-	
+	<h1>Diagnosa</h1>
 </body>
 </html>

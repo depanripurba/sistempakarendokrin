@@ -22,7 +22,7 @@
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
   <!-- Brand Logo -->
-  <a href="<?=base_url('')?>" class="brand-link text-center">
+  <a href="<?=base_url('master/index')?>" class="brand-link text-center mb-3">
     <span class="brand-text font-weight-light text-center">Sistem Pakar</span>
   </a>
 
@@ -31,7 +31,7 @@
     <!-- Sidebar user panel (optional) -->
     <div class="text-center">
       <div class="text-center">
-        <img width="200" src="<?= base_url('assets') ?>/dist/img/logo.jpg?>" class="rounded" alt="User Image">
+        <img width="200" src="<?= base_url('assets') ?>/dist/img/logo.jpg?>" class="rounded mb-2" alt="User Image">
       </div>
     </div>
 
@@ -42,7 +42,7 @@
     <nav class="mt-2">
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <li class="nav-item">
-          <a href="<?=base_url()?>" class="nav-link <?=$aktif==='home' ? 'active' : ''  ?>">
+          <a href="<?=base_url('dashboard')?>" class="nav-link <?=$aktif==='home' ? 'active' : ''  ?>">
             <i class="nav-icon fas fa-tachometer-alt"></i>
             <p>
               Dasboard Admin

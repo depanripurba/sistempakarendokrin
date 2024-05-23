@@ -10,10 +10,12 @@ class User extends CI_Controller
 	}
 
 	public function index(){
-		$this->load->view('user/home');
+		$data['judul']='SISTEM PAKAR DIAGNOSA ENDOKRIN - HOME';
+		$this->load->view('user/home',$data);
 	}
-
+	
 	public function diagnosa(){
-		$this->load->view('user/diagnosa');
+		$data['judul']='SISTEM PAKAR DIAGNOSA ENDOKRIN - DIAGNOSA';
+		$this->load->view('user/diagnosa',$data);
 	}
 }
