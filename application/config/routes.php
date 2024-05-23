@@ -59,3 +59,6 @@ $route['datagejala'] = 'master/datagejala';
 $route['datapenyakit'] = 'master/datapenyakit';
 $route['basispengetahuan'] = 'master/basispengetahuan';
 $route['datapasien'] = 'master/datapasien';
+$route['tambahdatagejala'] = 'master/tambahdatagejala';
+$route['tambahdatapenyakit'] = 'master/tambahdatapenyakit';
+$route['tambahbasispengetahuan'] = 'master/tambahbasispengetahuan';

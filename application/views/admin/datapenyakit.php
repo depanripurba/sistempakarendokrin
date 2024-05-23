@@ -21,7 +21,7 @@
     <div class="card">
               <div class="card-header">
                 <h3 class="card-title">Data Pasien</h3>
-                <a class="btn btn-success mx-3" href="<?= base_url('tambahdatpenyakit') ?>">Tambah Data Penyakit Baru</a>
+                <a class="btn btn-success mx-3" href="<?= base_url('tambahdatapenyakit') ?>">Tambah Data Penyakit Baru</a>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
