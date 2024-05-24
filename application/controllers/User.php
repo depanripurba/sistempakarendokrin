@@ -9,6 +9,7 @@ class User extends CI_Controller
 		parent::__construct();
 		// Load Model
 		$this->load->model('Pasien_model');
+		$this->load->model('Gejala_model');
 	}
 
 	public function index(){
@@ -41,6 +42,7 @@ class User extends CI_Controller
 		$data['judul']='SISTEM PAKAR DIAGNOSA ENDOKRIN - DIAGNOSA USER';
 		$data['aktif']='Diagnosa Pasien';
 		$data['user']=$this->session->userdata();
+		$data['gejala'] = $this->Gejala_model->getAllGejala();
 		$this->load->view('user/template/header',$data);
 		$this->load->view('user/template/sidebar',$data);
 		$this->load->view('user/diagnosa',$data);

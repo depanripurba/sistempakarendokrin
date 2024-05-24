@@ -13,14 +13,15 @@
                                 <thead>
                                     <tr>
                                         <th style="width: 10px">No.</th>
-                                        <th>Penyakit</th>
+                                        <th>Gejala</th>
                                         <th style="width: 40px">Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <?php $no = 1; foreach($gejala as $g): ?>
                                     <tr>
-                                        <td>1.</td>
-                                        <td>Update software</td>
+                                        <td><?=$no++?></td>
+                                        <td><?=$g['nama_gejala']?></td>
                                         <td>
                                             <div class="custom-control custom-checkbox">
                                                 <input class="custom-control-input" type="checkbox" id="customCheckbox1"
@@ -29,6 +30,7 @@
                                             </div>
                                         </td>
                                     </tr>
+                                    <?php endforeach ; ?>
                                 </tbody>
                             </table>
                         </div>
