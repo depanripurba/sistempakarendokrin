@@ -1,49 +1,56 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Gejala_model extends CI_Model {
+class Gejala_model extends CI_Model
+{
 
-    public function __construct() {
-        parent::__construct();
-    }
+	public function __construct()
+	{
+		parent::__construct();
+	}
 
 	// Function Get All Data
-	public function getAllGejala() {
-        // Query untuk mengambil semua data dari tabel
-        $query = $this->db->get('tbl_gejala');
-        // Mengembalikan hasil query dalam bentuk array
-        return $query->result_array();
-    }
+	public function getAllGejala()
+	{
+		// Query untuk mengambil semua data dari tabel
+		$query = $this->db->get('tbl_gejala');
+		// Mengembalikan hasil query dalam bentuk array
+		return $query->result_array();
+	}
 
-	public function getNewGejala(){
-		$this->db->order_by('kode_gejala','DESC');
-		$query = $this->db->get('tbl_gejala',1);
+	public function getNewGejala()
+	{
+		$this->db->order_by('kode_gejala', 'DESC');
+		$query = $this->db->get('tbl_gejala', 1);
 		return $query->row();
 	}
 
 	// Function Insert Data
-    public function insertGejala($data) {
-        // Masukkan data ke dalam tabel database
-        $this->db->insert('tbl_gejala', $data);
-    }
+	public function insertGejala($data)
+	{
+		// Masukkan data ke dalam tabel database
+		$this->db->insert('tbl_gejala', $data);
+	}
 
-	public function selectGejala($id){
+	public function selectGejala($id)
+	{
 		$selected = $this->db->get_where('tbl_gejala', array('kode_gejala' => $id))->row_array();
 		return $selected;
 	}
 
-	public function deleteGejala($id){
-        $this->db->where('kode_gejala', $id);
-        $this->db->delete('tbl_gejala');
+	public function deleteGejala($id)
+	{
+		$this->db->where('kode_gejala', $id);
+		$this->db->delete('tbl_gejala');
 
-        // Mengembalikan jumlah baris yang terpengaruh oleh operasi penghapusan
-        return $this->db->affected_rows();
+		// Mengembalikan jumlah baris yang terpengaruh oleh operasi penghapusan
+		return $this->db->affected_rows();
 	}
-    public function getcode()
+	public function getcode()
 	{
 		return $this->depalgoritma('G0');
 	}
-    private function depalgoritma($partone)
+	private function depalgoritma($partone)
 	{
 		$datagejala = $this->db->get('tbl_gejala');
 		$result = count($datagejala->result());
@@ -70,8 +77,8 @@ class Gejala_model extends CI_Model {
 		}
 		$KODEKER = $partone . $partend;
 		$PANJANGKODE = strlen($KODEKER);
-		if ($PANJANGKODE > 4) {
-			$KODEKER = "G0" . $partend;
+		if ($PANJANGKODE > 3) {
+			$KODEKER = "G" . $partend;
 		}
 
 		return $KODEKER;
