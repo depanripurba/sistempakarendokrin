@@ -33,8 +33,18 @@ class User extends CI_Controller
 	}
 
 	public function diagnosa(){
-		$data['judul']='SISTEM PAKAR DIAGNOSA ENDOKRIN - DIAGNOSA';
+		// Jika tidak ada Pasien yang berhasil login
+		if (!$this->session->userdata('username') || $this->session->userdata('role')!=='Pasien') {
+			redirect('user/login');
+		}
+
+		$data['judul']='SISTEM PAKAR DIAGNOSA ENDOKRIN - DIAGNOSA USER';
+		$data['aktif']='Diagnosa Pasien';
+		$data['user']=$this->session->userdata();
+		$this->load->view('user/template/header',$data);
+		$this->load->view('user/template/sidebar',$data);
 		$this->load->view('user/diagnosa',$data);
+		$this->load->view('user/template/footer',$data);
 	}
 
 	public function login(){

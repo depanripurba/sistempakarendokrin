@@ -1,11 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Diagnosa</title>
-</head>
-<body>
-	<h1>Diagnosa</h1>
-</body>
-</html>
+<div class="content-wrapper">
+<!-- batas -->
+<section class="content">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12 mt-2">
+				<p>Diagnosa</p>
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+<!-- /.content-wrapper -->

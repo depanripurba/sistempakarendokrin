@@ -29,7 +29,7 @@ Dasboard Pasien
 </a>
 </li>
 <li class="nav-item">
-<a href="<?=base_url('user/dashboard')?>" class="nav-link class="nav-link <?=$aktif==='Diagnosa Penyakit' ? 'active' : ''?>"">
+<a href="<?=base_url('user/diagnosa')?>" class="nav-link <?=$aktif==='Diagnosa Pasien' ? 'active' : ''?>"">
 <i class="nav-icon fas fa-user-injured"></i>
 <p>
 Diagnosa Penyakit
