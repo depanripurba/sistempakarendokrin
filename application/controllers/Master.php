@@ -180,12 +180,11 @@ class Master extends CI_Controller
 
 	public function tambahdatapengetahuan()
 	{
-		$data['dataedit'] = $this->Penyakit_model->ambildata();
 		$data['judul'] = 'Form Add Basis Pengetahuan';
 		$data['aktif'] = 'basispengetahuan';
 		$this->load->view('template/header',$data);
 		$this->load->view('template/sidebar', $data);
-		$this->load->view('admin/editpenyakit',$data);
+		$this->load->view('admin/formtambahbasis',$data);
 		$this->load->view('template/footer');
 	}
 	
