@@ -43,7 +43,7 @@
               <td>OSX.3</td>
               <td>125.5</td>
               <td class="text-center">
-                <button data-url="<?= base_url('hapuspenyakit/' . $data->kode_penyakit) ?>" id="hapusdata" class="btn btn-danger"><i data-url="<?= base_url('hapuspenyakit/' . $data->kode_penyakit) ?>" data-toggle="tooltip" data-placement="top" title="Hapus" class="fas fa-trash"></i></button> <a class="btn btn-info" href="<?= base_url('editpenyakit/') ?><?= $data->kode_penyakit ?>"><i data-toggle="tooltip" data-placement="top" title="Edit" class="fas fa-edit"></i></a>
+                <button data-url="" id="hapusdata" class="btn btn-danger"><i data-url="" data-toggle="tooltip" data-placement="top" title="Hapus" class="fas fa-trash"></i></button> <a class="btn btn-info" href="<?= base_url('editpenyakit/') ?>"><i data-toggle="tooltip" data-placement="top" title="Edit" class="fas fa-edit"></i></a>
               </td>
             </tr>
           </tbody>
