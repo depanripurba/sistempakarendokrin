@@ -49,6 +49,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'master';
+$route['default_controller'] = 'user';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+// deklarasi route
+$route['login'] = 'auth';
+$route['dashboard'] = 'master/index';
+$route['datagejala'] = 'master/datagejala';
+$route['datapenyakit'] = 'master/datapenyakit';
+$route['basispengetahuan'] = 'master/basispengetahuan';
+$route['datapasien'] = 'master/datapasien';
+$route['tambahdatagejala'] = 'master/tambahdatagejala';
+$route['tambahdatapenyakit'] = 'master/tambahdatapenyakit';
+$route['tambahbasispengetahuan'] = 'master/tambahbasispengetahuan';
+$route['addpenyakit'] = 'master/addpenyakit';
+$route['editpenyakit/(:any)'] = 'master/editpenyakit/$1';
+$route['posteditpenyakit'] = 'master/posteditpenyakit';
+$route['hapuspenyakit/(:any)'] = 'master/hapuspenyakit/$1';
