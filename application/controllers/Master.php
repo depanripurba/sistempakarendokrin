@@ -190,8 +190,5 @@ class Master extends CI_Controller
 	}
 	
 
-	public function datapenyakit(){
-		$this->load->view('admin/login');
-	}
 
 }

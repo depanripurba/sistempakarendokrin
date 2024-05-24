@@ -41,7 +41,7 @@ class Gejala_model extends CI_Model {
 	}
     public function getcode()
 	{
-		return $this->depalgoritma('G00');
+		return $this->depalgoritma('G0');
 	}
     private function depalgoritma($partone)
 	{
