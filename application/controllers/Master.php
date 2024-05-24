@@ -8,7 +8,7 @@ class Master extends CI_Controller
 	{
 		parent::__construct();
 		// Jika tidak ada user yang berhasil login, kembalikan ke halaman login
-		if (!$this->session->userdata('username')) {
+		if (!$this->session->userdata('username') || $this->session->userdata('role')!=='Admin') {
 			redirect('auth');
 		}
 		$this->load->model('Penyakit_model');

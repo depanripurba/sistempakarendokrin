@@ -15,7 +15,7 @@ class Auth extends CI_Controller
 		$data['judul'] = 'SP Theorema Bayes Endokrin - Login';
 
 		// Jika tidak ada user yang berhasil login, kembalikan ke halaman login
-		if ($this->session->userdata('username')) {
+		if ($this->session->userdata('username') && $this->session->userdata('role')==='Admin') {
 			redirect('dashboard');
 		}
 

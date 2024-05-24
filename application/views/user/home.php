@@ -27,7 +27,7 @@
 		</div>
 		<div class="center">
 			<p class="center-text">Selamat Datang Di Sistem Pakar Mendiagnosa Penyakit Endokrin Pada Manusia Menggunakan Metode Teorema Bayes</p>
-			<a class="button-diagnosa" href="<?=base_url('user/diagnosa')?>">
+			<a class="button-diagnosa" href="<?=base_url('user/login')?>">
 				<span>MULAI MENDIAGNOSA</span>
 			</a>
 		</div>
