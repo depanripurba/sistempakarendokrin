@@ -11,9 +11,10 @@ class Master extends CI_Controller
 		if (!$this->session->userdata('username') || $this->session->userdata('role')!=='Admin') {
 			redirect('auth');
 		}
-		$this->load->model('Penyakit_model');
 		// Load Model
+		$this->load->model('Penyakit_model');
 		$this->load->model('Gejala_model');
+		$this->load->model('Pasien_model');
 	}
 
 
@@ -21,9 +22,17 @@ class Master extends CI_Controller
 	{
 		$data['aktif'] = 'home';
 		$data['judul'] = 'SP Theorema Bayes Endokrin - Dashboard';
+		// NumRows
+		$this->db->from('tbl_gejala');
+		$data['gejala'] = $this->db->count_all_results();
+		$this->db->from('tbl_penyakit');
+		$data['penyakit'] = $this->db->count_all_results();
+		$this->db->from('tbl_pasien');
+		$data['pasien'] = $this->db->count_all_results();
+
 		$this->load->view('template/header',$data);
 		$this->load->view('template/sidebar', $data);
-		$this->load->view('admin/dashboard');
+		$this->load->view('admin/dashboard',$data);
 		$this->load->view('template/footer');
 		// }
 	}
@@ -62,9 +71,10 @@ class Master extends CI_Controller
 	{
 		$data['aktif'] = 'datapasien';
 		$data['judul'] = 'Data Pasien';
+		$data['pasien'] = $this->Pasien_model->getAllData();
 		$this->load->view('template/header',$data);
 		$this->load->view('template/sidebar', $data);
-		$this->load->view('admin/datapasien');
+		$this->load->view('admin/datapasien',$data);
 		$this->load->view('template/footer');
 	}
 
@@ -188,6 +198,14 @@ class Master extends CI_Controller
 		$this->load->view('template/footer');
 	}
 	
-
+	public function diagnosa(){
+		$data['judul']='Konsultasi';
+		$data['aktif']='Diagnosa Pasien';
+		$data['gejala'] = $this->Gejala_model->getAllGejala();
+		$this->load->view('template/header',$data);
+		$this->load->view('template/sidebar', $data);
+		$this->load->view('user/diagnosa',$data);
+		$this->load->view('template/footer',$data);
+	}
 
 }

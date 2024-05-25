@@ -35,6 +35,15 @@ class Auth extends CI_Controller
 		$username = $this->input->post('username');
 		$password = $this->input->post('password');
 
+		if($username==='' || $password===''){
+			$this->session->set_flashdata('message', '
+			<div class="alert alert-danger" role="alert">
+				Anda Belum Mengisi Form
+			</div>
+			');
+			redirect('auth');
+		}
+
 		// Query User
 		$login = $this->db->get_where('tbl_login', ['username' => $username])->row_array();
 
