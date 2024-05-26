@@ -17,7 +17,7 @@ class User extends CI_Controller
 		$this->load->view('user/home',$data);
 	}
 
-	public function dashboard(){
+	public function dashboard(){ 
 
 		// Jika tidak ada Pasien yang berhasil login
 		if (!$this->session->userdata('username') || $this->session->userdata('role')!=='Pasien') {
