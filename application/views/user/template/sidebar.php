@@ -9,10 +9,7 @@
     <div class="sidebar">
         <!-- Sidebar user panel (optional) -->
         <div class="text-center">
-            <div class="text-center">
-                <img width="200" src="<?= base_url('assets') ?>/dist/img/logo.jpg?>" class="rounded mb-2"
-                    alt="User Image">
-            </div>
+            <img src="<?= base_url('assets') ?>/dist/img/logo.jpg?>" class="rounded mb-2" alt="User Image" style="width:100%"/>
         </div>
 
         <!-- SidebarSearch Form -->
