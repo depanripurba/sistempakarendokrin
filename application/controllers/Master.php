@@ -12,8 +12,8 @@ class Master extends CI_Controller
 			redirect('auth');
 		}
 		$this->load->model('Penyakit_model');
-		// Load Model
 		$this->load->model('Gejala_model');
+		$this->load->model('Basis_model');
 	}
 
 
@@ -51,11 +51,13 @@ class Master extends CI_Controller
 	}
 	public function basispengetahuan()
 	{
+
 		$data['aktif'] = 'basispengetahuan';
 		$data['judul'] = 'Basis Pengetahuan';
+		$data['basis'] = $this->Basis_model->getAllData();
 		$this->load->view('template/header',$data);
 		$this->load->view('template/sidebar', $data);
-		$this->load->view('admin/basispengetahuan');
+		$this->load->view('admin/basispengetahuan',$data);
 		$this->load->view('template/footer');
 	}
 	public function datapasien()
@@ -180,6 +182,8 @@ class Master extends CI_Controller
 
 	public function tambahdatapengetahuan()
 	{
+		$data['penyakit'] = $this->Penyakit_model->getAllspes();
+		$data['gejala'] = $this->Gejala_model->getAllspes();
 		$data['judul'] = 'Form Add Basis Pengetahuan';
 		$data['aktif'] = 'basispengetahuan';
 		$this->load->view('template/header',$data);
@@ -188,6 +192,43 @@ class Master extends CI_Controller
 		$this->load->view('template/footer');
 	}
 	
+	public function postpengetahuan()
+	{
+
+		$cek = $this->Basis_model->insertData($this->input->post('kode_gejala'),$this->input->post('kode_penyakit'),$this->input->post('nilai'));
+		if ($cek) {
+			$this->session->set_flashdata('berhasil', 'Basis pengetahuan berhasil di tambahkan');
+			redirect(base_url('basispengetahuan'));
+		}
+	}
+	public function editbasis($id)
+	{
+		$data['aktif'] = 'basispengetahuan';
+		$data['judul'] = 'Edit Basis Pegetahuan';
+		$data['id'] =$id;
+		$data['basis'] = $this->Basis_model->selectBasis($id);
+		$this->load->view('template/header',$data);
+		$this->load->view('template/sidebar', $data);
+		$this->load->view('admin/editbasis',$data);
+		$this->load->view('template/footer');
+	}
+	public function postupdatebasis()
+	{
+		$cek = $this->Basis_model->updatedata();
+		if ($cek) {
+			$this->session->set_flashdata('berhasil', 'Basis Pengetahuan Berhasil di update');
+			redirect(base_url('basispengetahuan'));
+		}
+	}
+	
+	public function hapusbasis($id)
+	{
+		$cek = $this->Basis_model->hapusdata($id);
+		if ($cek) {
+			$this->session->set_flashdata('deleted', 'berhasil dihapus');
+			redirect(base_url('basispengetahuan'));
+		}
+	}
 
 
 }

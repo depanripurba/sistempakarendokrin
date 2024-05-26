@@ -68,3 +68,7 @@ $route['editpenyakit/(:any)'] = 'master/editpenyakit/$1';
 $route['posteditpenyakit'] = 'master/posteditpenyakit';
 $route['hapuspenyakit/(:any)'] = 'master/hapuspenyakit/$1'; 
 $route['tambahbasis'] = 'master/tambahdatapengetahuan'; 
+$route['posttambahbasis'] = 'master/postpengetahuan'; 
+$route['editbasis/(:any)'] = 'master/editbasis/$1'; 
+$route['postupdatebasis'] = 'master/postupdatebasis'; 
+$route['hapusbasis/(:any)'] = 'master/hapusbasis/$1'; 

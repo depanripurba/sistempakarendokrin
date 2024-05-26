@@ -30,22 +30,32 @@
             <tr>
               <th>No</th>
               <th>Kode Penyakit</th>
+              <th>Nama Penyakit</th>
               <th>Kode Gejala</th>
+              <th>Nama Gejala</th>
               <th>Nilai Probabilitas</th>
               <th>Aksi</th>
             </tr>
           </thead>
           <tbody>
-
-            <tr>
-              <td>Webkit</td>
-              <td>Safari 1.2</td>
-              <td>OSX.3</td>
-              <td>125.5</td>
-              <td class="text-center">
-                <button data-url="" id="hapusdata" class="btn btn-danger"><i data-url="" data-toggle="tooltip" data-placement="top" title="Hapus" class="fas fa-trash"></i></button> <a class="btn btn-info" href="<?= base_url('editpenyakit/') ?>"><i data-toggle="tooltip" data-placement="top" title="Edit" class="fas fa-edit"></i></a>
-              </td>
-            </tr>
+            <?php $nomor = 1 ?>
+            <?php foreach ($basis as $b) : ?>
+              <tr>
+                <td><?= $nomor ?></td>
+                <td><?= $b->kode_penyakit ?></td>
+                <td><?= $b->nama_penyakit ?></td>
+                <td><?= $b->kode_gejala ?></td>
+                <td><?= $b->nama_gejala ?></td>
+                <td><?= $b->nilai ?></td>
+                <td class="text-center">
+                  <button data-url="<?= base_url('hapusbasis/' . $b->id) ?>" id="hapusdata" class="btn btn-danger">
+                    <i data-url="<?= base_url('hapusbasis/' . $b->id) ?>" data-toggle="tooltip" data-placement="top" title="Hapus" class="fas fa-trash"></i>
+                  </button>
+                  <a class="btn btn-info" href="<?= base_url('editbasis/') . $b->id ?>"><i data-toggle="tooltip" data-placement="top" title="Edit" class="fas fa-edit"></i></a>
+                </td>
+              </tr>
+              <?php $nomor++ ?>
+            <?php endforeach ?>
           </tbody>
         </table>
       </div>

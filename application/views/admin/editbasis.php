@@ -9,50 +9,36 @@
 				<div class="col-md-9">
 					<div class="card card-primary">
 						<div class="card-header">
-							<h3 class="card-title">Form Tambah Data Pengetahuan</h3>
+							<h3 class="card-title">Form Edit Data Pengetahuan</h3>
 						</div>
 						<!-- /.card-header -->
 						<!-- form start -->
-						<form method="POST" action="<?= base_url('posttambahbasis') ?>">
+						<form method="POST" action="<?= base_url('postupdatebasis') ?>">
 							<div class="card-body">
 								<div class="form-group">
 									<label for="kodegejala">Nama Penyakit</label>
-									<select class="form-control" name="kode_penyakit" id="kodegejala">
-										<?php foreach ($penyakit as $pen) : ?>
-											<option value="<?= $pen->kode_penyakit ?>"><?= $pen->kode_penyakit ?> : <?= $pen->nama_penyakit ?> </option>
-										<?php endforeach ?>
-									</select>
+                                    <input class="form-control" type="text" disabled value="<?=$basis['kode_penyakit']." :". $basis['nama_penyakit']?>">
 								</div>
 								<div class="form-group">
 									<label for="namagejala">Nama Gejala</label>
-									<select class="form-control" name="kode_gejala" id="namagejala">
-										<?php foreach ($gejala as $gej) : ?>
-											<option value="<?= $gej->kode_gejala ?>">
-												<?= $gej->kode_gejala ?> : <?= $gej->nama_gejala ?>
-											</option>
-										<?php endforeach ?>
-									</select>
+                                    <input class="form-control" type="text" disabled value="<?=$basis['kode_gejala']." :". $basis['nama_gejala']?>">
+                                    <input type="hidden" name="id" value="<?=$id?>">
 								</div>
 								<div class="form-group">
 									<label for="nilaigejala">Nilai Gejala</label>
-									<input type="text" name="nilai" class="form-control" id="nilaigejala">
+									<input type="text" name="nilai" class="form-control" value="<?=$basis['nilai']?>" id="nilaigejala">
 								</div>
 
 							</div>
 							<!-- /.card-body -->
 
 							<div class="card-footer">
-								<button type="submit" class="btn btn-primary">Tambahkan</button>
+								<button type="submit" class="btn btn-primary">Update Data</button>
 								<a href="<?= base_url('basispengetahuan') ?>" class="btn btn-secondary">Batal/Kembali</a>
 							</div>
 						</form>
 					</div>
 				</div>
-
-
-
-
-				<!-- custom isi -->
 			</div>
 		</div>
 	</div>

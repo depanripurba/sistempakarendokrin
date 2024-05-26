@@ -83,4 +83,10 @@ class Gejala_model extends CI_Model
 
 		return $KODEKER;
 	}
+	public function getAllspes()
+	{
+		$this->db->order_by('kode_gejala', 'ASC');
+		return $this->db->get('tbl_gejala')->result();
+	}
+
 }
