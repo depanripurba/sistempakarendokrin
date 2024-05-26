@@ -26,6 +26,7 @@
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
+                            <?=$this->session->flashdata('message');?>
                             <table id="example2" class="table table-bordered table-hover">
                                 <thead>
                                     <tr>
@@ -46,10 +47,10 @@
                                         <td><?=$p['jenis_kelamin']?></td>
                                         <td><?=$p['alamat']?></td>
                                         <td>
-                                            <button class="btn btn-danger">
+                                            <a onclick='confirm("Apakah Anda Ingin Menghapus Data Pasien ini?")' href='<?=base_url('master/delete_pasien/'.$p['id'])?>' class="btn btn-danger">
                                                 <i class="fas fa-trash mr-2"></i>
                                                 <span>Hapus</span>
-                                            </button>
+                                            </a>
                                         </td>
                                     </tr>
                                     <?php endforeach;?>

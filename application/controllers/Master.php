@@ -81,6 +81,16 @@ class Master extends CI_Controller
 		$this->load->view('template/footer');
 	}
 
+	public function delete_pasien($id){
+		$this->Pasien_model->deleteData($id);
+		$this->session->set_flashdata('message', '
+		<div class="alert alert-danger" role="alert">
+			Anda Telah Menghapus Data Pasien
+		</div>
+		');
+		redirect('/datapasien');
+	}
+
 	public function tambahdatagejala()
 	{
 		$data['kode'] = $this->Gejala_model->getcode();
