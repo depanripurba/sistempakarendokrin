@@ -1,24 +1,21 @@
-</div>
-<!-- /.content-wrapper -->
-
 <!-- Control Sidebar -->
 <aside class="control-sidebar control-sidebar-dark">
-  <!-- Control sidebar content goes here -->
-  <div class="p-3">
-    <h5>Administrator</h5>
-    <a href="<?=base_url('auth/logout')?>">logout</a>
-  </div>
+    <!-- Control sidebar content goes here -->
+    <div class="p-3">
+        <h5>Pasien</h5>
+        <a href="<?=base_url('auth/logout')?>">logout</a>
+    </div>
 </aside>
 <!-- /.control-sidebar -->
 
 <!-- Main Footer -->
 <footer class="main-footer">
-  <!-- To the right -->
-  <div class="float-right d-none d-sm-inline">
-    Anything you want
-  </div>
-  <!-- Default to the left -->
-  <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+    <!-- To the right -->
+    <div class="float-right d-none d-sm-inline">
+        Anything you want
+    </div>
+    <!-- Default to the left -->
+    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
 </footer>
 </div>
 <!-- ./wrapper -->
@@ -47,38 +44,38 @@
 <!-- AdminLTE for demo purposes -->
 
 <script>
-  let hapusdata = document.querySelectorAll('#hapusdata');
-  let baseurl = document.querySelector('#baseurl');
-  hapusdata.forEach((a) => {
+let hapusdata = document.querySelectorAll('#hapusdata');
+let baseurl = document.querySelector('#baseurl');
+hapusdata.forEach((a) => {
     a.addEventListener('click', (a) => {
-      let url = a.target.getAttribute('data-url');
-      let tes = confirm("yakin menghapus ?")
-      if(tes===true){
-        document.location.href = url
-      }else{
-        return null
-      }
+        let url = a.target.getAttribute('data-url');
+        let tes = confirm("yakin menghapus ?")
+        if (tes === true) {
+            document.location.href = url
+        } else {
+            return null
+        }
 
     })
-  })
+})
 
-  $(function() {
+$(function() {
     $("#example1").DataTable({
-      "responsive": true,
-      "lengthChange": false,
-      "autoWidth": false,
-      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+        "responsive": true,
+        "lengthChange": false,
+        "autoWidth": false,
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
     }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
     $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-      "responsive": true,
+        "paging": true,
+        "lengthChange": false,
+        "searching": false,
+        "ordering": true,
+        "info": true,
+        "autoWidth": false,
+        "responsive": true,
     });
-  });
+});
 </script>
 
 <!-- skrip hapus -->

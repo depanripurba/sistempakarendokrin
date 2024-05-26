@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="<?=base_url('assets')?>/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="<?=base_url('assets')?>/dist/css/adminlte.min.css">
-	<!-- Icon -->
-	<link rel="shortcut icon" href="<?=base_url('assets/img/logo.png')?>" type="image/x-icon">
+    <!-- Icon -->
+    <link rel="shortcut icon" href="<?=base_url('assets/img/logo.png')?>" type="image/x-icon">
 </head>
 
 <body class="hold-transition login-page">
@@ -37,6 +37,7 @@
                             </div>
                         </div>
                     </div>
+                    <span class="text-danger"><?php echo form_error('username'); ?></span>
                     <div class="input-group mb-3">
                         <input name="password" type="password" class="form-control" placeholder="Password">
                         <div class="input-group-append">
@@ -45,6 +46,7 @@
                             </div>
                         </div>
                     </div>
+                    <span class="text-danger"><?php echo form_error('password'); ?></span>
                     <div class="row">
                         <div class="col-4">
                             <button type="submit" class="btn btn-primary btn-block">Login</button>
@@ -66,5 +68,6 @@
     <!-- AdminLTE App -->
     <script src="<?=base_url('assets')?>/dist/js/adminlte.min.js"></script>
 </body>
+
 
 </html>
