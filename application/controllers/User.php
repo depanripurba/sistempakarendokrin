@@ -57,7 +57,7 @@ class User extends CI_Controller
 			redirect('user/dashboard');
 		}
 
-		$data['judul']='SP Theorema Bayes Endokrin - Register';
+		$data['judul']='SP Teorema Bayes Endokrin - Register';
 		$this->load->view('user/login',$data);
 	}
 
