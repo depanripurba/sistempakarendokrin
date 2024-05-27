@@ -27,7 +27,7 @@
                                     <div class="col-1">
                                         <span>Alamat</span>
                                     </div>
-                                    <div class="col-4"><span>: [Alamat]</span></div>
+                                    <div class="col-4"><span>: <?=$user['alamat']?></span></div>
                                 </div>
                             </div>
                         </div>

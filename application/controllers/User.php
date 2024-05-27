@@ -77,6 +77,7 @@ class User extends CI_Controller
 				$data = [
 					'username' => $login['username'],
 					'fullname' => $login['fullname'],
+					'alamat' => $login['alamat'],
 					'role' => 'Pasien'
 				];
 				$this->session->set_userdata($data);
