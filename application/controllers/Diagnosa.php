@@ -16,6 +16,9 @@ class Diagnosa extends CI_Controller
 
     public function prosesdiagnosa()
     {
+        if($_SESSION['hasildiagnosa']!=null){
+            $this->session->unset_userdata('hasildiagnosa');
+        }
         $newdata = [];
         foreach ($_POST as $data => $val) {
             if ($val == 1) {
@@ -120,11 +123,7 @@ class Diagnosa extends CI_Controller
             }
             $inor++;
         }
-        // masukkan ke dalam database
-        // if ($hasildiagnosakirim['kodepenyakit'] != null) {
-        //     $this->PetaniModel->addData($_POST['nama'], $hasildiagnosakirim['kodepenyakit'], $stringjson, $hasildiagnosakirim['nilaipeluang']);
-        // }
-        // end memasukkan ke dalam database
+        
         $this->session->set_userdata('hasildiagnosa', $hasildiagnosakirim);
 
         $propertiview['judul'] = 'SISTEM PAKAR DIAGNOSA ENDOKRIN - DIAGNOSA USER';

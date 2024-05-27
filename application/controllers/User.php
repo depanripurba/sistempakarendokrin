@@ -164,4 +164,10 @@ class User extends CI_Controller
 		}
 
 	}
+
+	public function cetakhasil()
+	{
+		$this->load->view('user/cetakhasil');
+		
+	}
 }
