@@ -2,7 +2,9 @@
 <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
     <div class="p-3">
-        <h5>Pasien</h5>
+        <h5>
+            Administrator
+        </h5>
         <a href="<?=base_url('auth/logout')?>">logout</a>
     </div>
 </aside>
