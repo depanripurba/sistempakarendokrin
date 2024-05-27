@@ -72,3 +72,4 @@ $route['posttambahbasis'] = 'master/postpengetahuan';
 $route['editbasis/(:any)'] = 'master/editbasis/$1'; 
 $route['postupdatebasis'] = 'master/postupdatebasis'; 
 $route['hapusbasis/(:any)'] = 'master/hapusbasis/$1'; 
+$route['diagnosa'] = 'user/diagnosa'; 
