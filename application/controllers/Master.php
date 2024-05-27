@@ -214,8 +214,8 @@ class Master extends CI_Controller
 	}
 	
 	public function diagnosa(){
-		$data['judul']='Konsultasi';
-		$data['aktif']='Diagnosa Pasien';
+		$data['judul']='Diagnosa Pasien';
+		$data['aktif']='home';
 		$data['gejala'] = $this->Gejala_model->getAllGejala();
 		$this->load->view('template/header',$data);
 		$this->load->view('template/sidebar', $data);
