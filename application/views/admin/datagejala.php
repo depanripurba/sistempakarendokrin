@@ -9,12 +9,6 @@
                         <div class="col-sm-6">
                             <h1 class="m-0">Data Gejala</h1>
                         </div><!-- /.col -->
-                        <div class="col-sm-6">
-                            <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="#">master</a></li>
-                                <li class="breadcrumb-item active">datagejala</li>
-                            </ol>
-                        </div><!-- /.col -->
                     </div><!-- /.row -->
                 </div><!-- /.container-fluid -->
             </div>
@@ -22,9 +16,10 @@
             <div class="content">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Data Gejala</h3>
-                        <a class="btn btn-success mx-3" href="<?= base_url('tambahdatagejala') ?>">Tambah Data Gejala
-                            Baru</a>
+                        <div class="d-flex justify-content-between">
+                            <h3 class="card-title">Data Gejala</h3>
+                            <a class="btn btn-success" href="<?= base_url('tambahdatagejala') ?>">Tambah Data Gejala Baru</a>
+                        </div>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">

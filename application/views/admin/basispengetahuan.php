@@ -9,13 +9,6 @@
           <div class="row mb-2">
               <div class="col-sm-6">
                   <h1 class="m-0">Data Basis Pengetahuan</h1>
-              </div><!-- /.col -->
-              <div class="col-sm-6">
-                  <ol class="breadcrumb float-sm-right">
-                      <li class="breadcrumb-item"><a href="#">master</a></li>
-                      <li class="breadcrumb-item active">basispengetahuan</li>
-                  </ol>
-              </div><!-- /.col -->
           </div><!-- /.row -->
       </div><!-- /.container-fluid -->
   </div>
@@ -23,8 +16,10 @@
   <div class="content">
     <div class="card">
       <div class="card-header">
+      <div class="d-flex justify-content-between">
         <h3 class="card-title">Data Basis Pengetahuan</h3>
         <a class="btn btn-success mx-3" href="<?= base_url('tambahbasis') ?>">Tambah Data Basis Pengetahuan Baru</a>
+      </div>
       </div>
       <!-- /.card-header -->
       <div class="card-body">
