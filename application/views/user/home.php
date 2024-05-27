@@ -28,7 +28,7 @@
 		<div class="center">
 			<p class="center-text">Selamat Datang Di Website</p>
 			<br>
-			<p class="center-text">SISTEM PAKA DALAM MENDIAGNOSA PENYAKIT ENDOKRIN PADA MANUSIA MENGGUNAKAN<br>METODE TEOREMA BAYES (STUDI KASUS :<br>MITRA SEJATI MEDAN)</p>
+			<p class="center-text">Sistem Pakar Dalam Mendiagnosa Penyakit Endokrin Pada Manusia Menggunakan<br>Metode Teorema Bayes (Studi Kasus :<br>Mitra Sejati Medan)</p>
 			<a class="button-diagnosa" href="<?=base_url('user/login')?>">
 				<span>MULAI MENDIAGNOSA</span>
 			</a>
