@@ -17,7 +17,7 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="d-flex justify-content-between">
-                            <h3 class="card-title">Data Gejala</h3>
+                            <h3 class="card-title"></h3>
                             <a class="btn btn-success" href="<?= base_url('tambahdatagejala') ?>">Tambah Data Gejala Baru</a>
                         </div>
                     </div>

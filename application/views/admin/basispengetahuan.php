@@ -17,7 +17,7 @@
     <div class="card">
       <div class="card-header">
       <div class="d-flex justify-content-between">
-        <h3 class="card-title">Data Basis Pengetahuan</h3>
+        <h3 class="card-title"></h3>
         <a class="btn btn-success mx-3" href="<?= base_url('tambahbasis') ?>">Tambah Data Basis Pengetahuan Baru</a>
       </div>
       </div>
