@@ -28,7 +28,7 @@
 		<div class="center">
 			<p class="center-text">Selamat Datang Di Website</p>
 			<br>
-			<p class="center-text">SISTEM PAKA DALAM MENDIAGNOSA PENYAKIT ENDOKRIN PADA MANUSIA MENGGUNAKAN METODE TEOREMA BAYES (STUDI KASUS : MITRA SEJATI MEDAN)</p>
+			<p class="center-text">SISTEM PAKA DALAM MENDIAGNOSA PENYAKIT ENDOKRIN PADA MANUSIA MENGGUNAKAN<br>METODE TEOREMA BAYES (STUDI KASUS :<br>MITRA SEJATI MEDAN)</p>
 			<a class="button-diagnosa" href="<?=base_url('user/login')?>">
 				<span>MULAI MENDIAGNOSA</span>
 			</a>
