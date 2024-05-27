@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 26 Bulan Mei 2024 pada 09.09
+-- Waktu pembuatan: 27 Bulan Mei 2024 pada 04.21
 -- Versi server: 10.4.28-MariaDB
 -- Versi PHP: 8.1.17
 
@@ -41,9 +41,30 @@ CREATE TABLE `tbl_basispengetahuan` (
 --
 
 INSERT INTO `tbl_basispengetahuan` (`id`, `kode_gejala`, `nama_gejala`, `kode_penyakit`, `nama_penyakit`, `nilai`) VALUES
-(1, 'G15', 'Pembengkakan pada tangan dan kaki', 'P001', 'Diabetes Meliutus ', 0.4),
-(3, 'G15', 'Pembengkakan pada tangan dan kaki', 'P001', 'Diabetes Meliutus ', 0.3),
-(5, 'G16', 'Mendengkur', 'P001', 'Diabetes Meliutus ', 0.6);
+(6, 'G01', 'Sering merasa haus atau sangat lapar', 'P001', 'Diabetes Meliutus ', 0.33),
+(7, 'G02', 'Sering buang air kecil, terutama pada malam hari', 'P001', 'Diabetes Meliutus ', 0.33),
+(8, 'G03', 'Penurunan berat badan', 'P001', 'Diabetes Meliutus ', 1),
+(9, 'G04', 'Penurunan massa otot', 'P001', 'Diabetes Meliutus ', 0.33),
+(10, 'G05', 'Pandangan kabur', 'P001', 'Diabetes Meliutus ', 0.6),
+(11, 'G06', 'Urine mengandung keton', 'P001', 'Diabetes Meliutus ', 0.33),
+(12, 'G07', 'Tubuh mudah lelah dan lemas', 'P001', 'Diabetes Meliutus ', 1),
+(13, 'G08', 'Luka menjadi lebih sulit sembuh', 'P001', 'Diabetes Meliutus ', 0.33),
+(14, 'G09', 'Kesulitan tidur', 'P001', 'Diabetes Meliutus ', 1),
+(15, 'G03', 'Penurunan berat badan', 'P002', 'Hipertiroid ', 1),
+(18, 'G10', 'Detak jantung yang cepat atau tidak teratur', 'P002', 'Hipertiroid ', 0.27),
+(19, 'G11', 'Merasa gugup atau mudah tersinggung', 'P002', 'Hipertiroid ', 0.27),
+(20, 'G07', 'Tubuh mudah lelah dan lemas', 'P002', 'Hipertiroid ', 1),
+(21, 'G12', 'Tremor tangan, kelemahan otot', 'P002', 'Hipertiroid ', 0.27),
+(22, 'G13', 'Mudah kepanasan', 'P002', 'Hipertiroid ', 0.27),
+(23, 'G14', 'Sering buang air besar', 'P002', 'Hipertiroid ', 0.27),
+(24, 'G05', 'Pandangan kabur', 'P002', 'Hipertiroid ', 0.6),
+(25, 'G09', 'Kesulitan tidur', 'P002', 'Hipertiroid ', 1),
+(26, 'G03', 'Penurunan berat badan', 'P003', 'Akromegali', 1),
+(27, 'G15', 'Pembengkakan pada tangan dan kaki', 'P003', 'Akromegali', 0.4),
+(28, 'G09', 'Kesulitan tidur', 'P003', 'Akromegali', 1),
+(29, 'G07', 'Tubuh mudah lelah dan lemas', 'P003', 'Akromegali', 1),
+(30, 'G16', 'Mendengkur', 'P003', 'Akromegali', 0.4),
+(31, 'G17', 'Perubahan pada tampilan wajah , seperti alis, rahang bawah, dan hidung menjadi semakin besar, dan sela gigi menjadi lebih lebar', 'P003', 'Akromegali', 0.4);
 
 -- --------------------------------------------------------
 
@@ -169,7 +190,7 @@ ALTER TABLE `tbl_pasien`
 -- AUTO_INCREMENT untuk tabel `tbl_basispengetahuan`
 --
 ALTER TABLE `tbl_basispengetahuan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_pasien`
