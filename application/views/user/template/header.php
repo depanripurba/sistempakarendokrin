@@ -38,6 +38,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <li class="nav-item">
 <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
 <i class="fas fa-user-tie" style="margin-right:10px"></i>
+
+<?php
+                                if($user['role']==="Admin"){
+                                    $user['fullname']='Administrator';
+                                }
+        ?>
 <span><?=$user['fullname']?></span>
 </a>
 </li>

@@ -1,3 +1,4 @@
+
 <div class="content-wrapper">
     <section class="content">
         <div class="row">
@@ -17,6 +18,13 @@
                         </div>
                         <div class="row invoice-info">
                             <div class="col-12">
+                                <?php
+                                if($user['role']==="Admin"){
+                                    $user['fullname']='Administrator';
+                                    $user['alamat']='Administrator';
+                                }
+
+                                ?>
                                 <div class="row mt-3">
                                     <div class="col-1">
                                         <span>Nama</span>
@@ -43,7 +51,7 @@
                                 <td><?=$hasil['kodepenyakit']?> || <?=$hasil['namapenyakit']?></td>
                             </tr>
                             <tr style="vertical-align: top">
-                                <td style="width:200px">Nilai Probabilitas Bayes</td>
+                            <td style="width:200px">Solusi</td>
                                 <td style="width:15px">:</td>
                                 <td>
                                     <ul style="padding: 0 20px;">
