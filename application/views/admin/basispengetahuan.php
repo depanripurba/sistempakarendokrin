@@ -45,11 +45,11 @@
                 <td><?= $b->kode_gejala ?></td>
                 <td><?= $b->nama_gejala ?></td>
                 <td><?= $b->nilai ?></td>
-                <td class="text-center">
+                <td style="width: 200px;">
+                  <a class="btn btn-success" href="<?= base_url('editbasis/') . $b->id ?>">Edit</a>
                   <button data-url="<?= base_url('hapusbasis/' . $b->id) ?>" id="hapusdata" class="btn btn-danger">
-                    <i data-url="<?= base_url('hapusbasis/' . $b->id) ?>" data-toggle="tooltip" data-placement="top" title="Hapus" class="fas fa-trash"></i>
+                    Delete
                   </button>
-                  <a class="btn btn-info" href="<?= base_url('editbasis/') . $b->id ?>"><i data-toggle="tooltip" data-placement="top" title="Edit" class="fas fa-edit"></i></a>
                 </td>
               </tr>
               <?php $nomor++ ?>
