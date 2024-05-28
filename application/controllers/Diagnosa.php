@@ -16,7 +16,7 @@ class Diagnosa extends CI_Controller
 
     public function prosesdiagnosa()
     {
-        if($_SESSION['hasildiagnosa']!=null){
+        if(isset($_SESSION['hasildiagnosa'])){
             $this->session->unset_userdata('hasildiagnosa');
         }
         $newdata = [];
