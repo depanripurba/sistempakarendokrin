@@ -15,9 +15,7 @@
                             <div class="card-body">
                                 <div class="form-group">
                                     <label for="kode_penyakit">Kode Penyakit</label>
-                                    <input value="<?=$kode?>" disabled="" name="kode_penyakit" type="text"
-                                        class="form-control" id="kodepenyakit" placeholder="Kode Penyakit">
-                                    <input type="hidden" name="kode_penyakit" value="<?=$kode?>">
+                                    <input name="kode_penyakit" name="kode_penyakit" type="text" class="form-control" id="kodepenyakit" placeholder="Kode Penyakit">
                                 </div>
                                 <div class="form-group">
                                     <label for="namagejala">Nama Penyakit</label>

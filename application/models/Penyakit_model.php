@@ -25,7 +25,6 @@ class Penyakit_model extends CI_Model
 	{
 		$this->db->order_by('kode_penyakit', 'ASC');
 		$data['penyakit'] = $this->db->get('tbl_penyakit')->result();
-		$data['autocode'] = $this->depalgoritma('P00');
 		return $data;
 	}
 

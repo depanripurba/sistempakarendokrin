@@ -28,7 +28,7 @@
                                 <tr>
                                     <th>Kode Gejala</th>
                                     <th>Nama Gejala</th>
-                                    <th>Action</th>
+                                    <th style="width: 200px;">Action</th>
                                 </tr>
                             </thead>
                             <tbody>

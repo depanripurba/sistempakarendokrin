@@ -151,7 +151,7 @@ class Master extends CI_Controller
 
 	public function tambahdatapenyakit()
 	{
-		$data['kode'] = $this->Penyakit_model->getcode();
+
 		$data['aktif'] = 'datapenyakit';
 		$data['judul'] = 'Form Tambah Data Penyakit';
 		$this->load->view('template/header',$data);
