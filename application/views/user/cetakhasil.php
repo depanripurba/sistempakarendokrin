@@ -109,6 +109,10 @@ $user = $this->session->userdata();
                                     </td>
                                 </tr>
                             </table>
+                            <div style="width:200px;margin-left:700px;"> 
+                            Diketahui oleh <br>  <br>  <br>  <br>     
+                            Dr. Imelda Yulia  
+                            </div>
                             <!-- this row will not appear when printing -->
                             <div class="row no-print">
                                 <div class="col-12">
