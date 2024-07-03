@@ -25,7 +25,12 @@ class Diagnosa extends CI_Controller
                 $newdata[$data] = $val;
             }
         }
-        if (count($newdata) < 1) {
+        if (count($newdata) <=3) {
+            $this->session->set_flashdata('message', '
+			<div class="alert alert-danger" role="alert">
+				Minimal Pilih 4 Gejala. Terima kasih
+			</div>
+			');
             redirect('diagnosa');
         }
         //proses filterisasi

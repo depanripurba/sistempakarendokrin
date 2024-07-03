@@ -9,6 +9,7 @@
                             <div class="card-header">
                                 <h3 class="card-title">Diagnosa Penyakit</h3>
                             </div>
+                            <?=$this->session->flashdata('message');?>
                             <div class="card-body">
                                 <table class="table table-bordered">
                                     <thead>
