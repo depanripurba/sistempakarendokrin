@@ -37,13 +37,6 @@
                         </div>
                         <div class="row invoice-info">
                             <div class="col-12">
-                                <?php
-                                if ($user['role'] === "Admin") {
-                                    $user['fullname'] = 'Administrator';
-                                    $user['alamat'] = 'Administrator';
-                                }
-
-                                ?>
                                 <div class="row mt-3">
                                     <div class="col-1">
                                         <span>Nama</span>

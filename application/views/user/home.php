@@ -47,7 +47,7 @@
 			<p class="center-text">Selamat Datang Di Website</p>
 			<br>
 			<p class="center-text">Sistem Pakar Dalam Mendiagnosa Penyakit Endokrin Pada Manusia Menggunakan<br>Metode Teorema Bayes (Studi Kasus :<br>Mitra Sejati Medan)</p>
-			<a style="margin-left: -700px;" class="button-diagnosa" href="<?= base_url('user/diagnosa') ?>">
+			<a style="margin-left: -1000px;" class="button-diagnosa" href="<?= base_url('user/diagnosa') ?>">
 				<span>MULAI MENDIAGNOSA</span>
 			</a>
 		</div>
