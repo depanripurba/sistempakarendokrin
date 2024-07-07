@@ -46,7 +46,7 @@
                 <td><?= $b->nama_gejala ?></td>
                 <td><?= $b->nilai ?></td>
                 <td style="width: 200px;">
-                  <a class="btn btn-success" href="<?= base_url('editbasis/') . $b->id ?>">Edit</a>
+                  <a class="btn btn-success" href="<?= base_url('editbasis/') . $b->id ?>">Ubah</a>
                   <button data-url="<?= base_url('hapusbasis/' . $b->id) ?>" id="hapusdata" class="btn btn-danger">
                     Hapus
                   </button>
