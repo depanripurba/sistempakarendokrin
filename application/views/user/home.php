@@ -37,8 +37,8 @@
 				<p class="header-text">SISTEM PAKAR ENDOKRIN</p>
 			</div>
 			<div class="sidee">
-				<a class="tombol" href="<?= base_url('login') ?>">INFORMASI</a>
-				<a class="tombol" href="<?= base_url('login') ?>">DIAGNOSA</a>
+				<a class="tombol" href="<?= base_url('user/info') ?>">INFORMASI</a>
+				<a class="tombol" href="<?= base_url('user/diagnosa') ?>">DIAGNOSA</a>
 				<a class="tombol" href="<?= base_url('login') ?>">LOGIN ADMIN</a>
 			</div>
 
@@ -47,7 +47,7 @@
 			<p class="center-text">Selamat Datang Di Website</p>
 			<br>
 			<p class="center-text">Sistem Pakar Dalam Mendiagnosa Penyakit Endokrin Pada Manusia Menggunakan<br>Metode Teorema Bayes (Studi Kasus :<br>Mitra Sejati Medan)</p>
-			<a style="margin-left: -700px;" class="button-diagnosa" href="<?= base_url('user/login') ?>">
+			<a style="margin-left: -700px;" class="button-diagnosa" href="<?= base_url('user/diagnosa') ?>">
 				<span>MULAI MENDIAGNOSA</span>
 			</a>
 		</div>

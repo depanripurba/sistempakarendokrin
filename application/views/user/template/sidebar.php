@@ -1,7 +1,7 @@
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="<?=base_url('master/index')?>" class="brand-link text-center mb-3">
+    <a href="<?=base_url('/')?>" class="brand-link text-center mb-3">
         <span class="brand-text font-weight-light text-center">Sistem Pakar</span>
     </a>
 
