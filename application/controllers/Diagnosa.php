@@ -16,16 +16,17 @@ class Diagnosa extends CI_Controller
 
     public function prosesdiagnosa()
     {
-        if(isset($_SESSION['hasildiagnosa'])){
+        if (isset($_SESSION['hasildiagnosa'])) {
             $this->session->unset_userdata('hasildiagnosa');
         }
+
         $newdata = [];
-        foreach ($_POST as $data => $val) {
+        foreach ($_POST['gejala'] as $data => $val) {
             if ($val == 1) {
                 $newdata[$data] = $val;
             }
         }
-        if (count($newdata) <=3) {
+        if (count($newdata) <= 3) {
             $this->session->set_flashdata('message', '
 			<div class="alert alert-danger" role="alert">
 				Minimal Pilih 4 Gejala. Terima kasih
@@ -33,6 +34,18 @@ class Diagnosa extends CI_Controller
 			');
             redirect('diagnosa');
         }
+        // bagian tambah data pasien
+        $data_to_register = [
+            "username" => "user",
+            "password" => "password",
+            "fullname" => $_POST['nama'],
+            "usia" => $_POST['usia'],
+            "jenis_kelamin" => $_POST['jeniskelamin'],
+            "alamat" => $_POST['alamat'],
+        ];
+
+        $this->Pasien_model->insertData($data_to_register);
+        // end tambah data pasien
         //proses filterisasi
         $kemungkinanpenyakit = $this->forwadchaining($newdata);
         // forward chaining
@@ -114,7 +127,7 @@ class Diagnosa extends CI_Controller
             $hasildiagnosakirim['namapenyakit'] = $ektrak->nama_penyakit;
             $hasildiagnosakirim['solusi'] = $ektrak->solusi;
             $hasildiagnosakirim['nilaipeluang'] = $values;
-            $hasildiagnosakirim['persenpeluang'] = $values*100;
+            $hasildiagnosakirim['persenpeluang'] = $values * 100;
             break;
         }
         $hasildiagnosakirim['gejalacentang'] = $gejalacentang;
@@ -128,12 +141,14 @@ class Diagnosa extends CI_Controller
             }
             $inor++;
         }
-        
+
         $this->session->set_userdata('hasildiagnosa', $hasildiagnosakirim);
 
         $propertiview['judul'] = 'SISTEM PAKAR DIAGNOSA ENDOKRIN - DIAGNOSA USER';
         $propertiview['aktif'] = 'Diagnosa Pasien';
         $propertiview['hasil'] = $hasildiagnosakirim;
+        $propertiview['nama'] = $_POST['nama'];
+        $propertiview['alamat'] = $_POST['alamat'];
         $propertiview['user'] = $this->session->userdata();
         $this->load->view('user/template/header', $propertiview);
         $this->load->view('user/template/sidebar', $propertiview);

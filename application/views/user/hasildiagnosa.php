@@ -48,13 +48,13 @@
                                     <div class="col-1">
                                         <span>Nama</span>
                                     </div>
-                                    <div class="col-4"><span>: <?= $user['fullname'] ?></span></div>
+                                    <div class="col-4"><span>: <?= $nama ?></span></div>
                                 </div>
                                 <div class="row">
                                     <div class="col-1">
                                         <span>Alamat</span>
                                     </div>
-                                    <div class="col-4"><span>: <?= $user['alamat'] ?></span></div>
+                                    <div class="col-4"><span>: <?= $alamat ?></span></div>
                                 </div>
                             </div>
                         </div>

@@ -43,14 +43,14 @@
 			</div>
 
 		</div>
-		<div class="center">
-			<p class="center-text">Selamat Datang Di Website</p>
-			<br>
-			<p class="center-text">Sistem Pakar Dalam Mendiagnosa Penyakit Endokrin Pada Manusia Menggunakan<br>Metode Teorema Bayes (Studi Kasus :<br>Mitra Sejati Medan)</p>
-			<a style="margin-left: -700px;" class="button-diagnosa" href="<?= base_url('user/login') ?>">
-				<span>MULAI MENDIAGNOSA</span>
-			</a>
-		</div>
+		<div>
+            <h2>
+                Informasi Penyakit Endokrin
+            </h2>
+            <p>
+                Penyakit Endokrin adalah penyakit yang menyerang sistem endokrin dalam tubuh manusia. Gangguan penyakit pada sistem endokrin menyebabkan perubahan fisik akibat pengaruh dari sistem hormonal yang memengaruhi langsung fungsi organ yang terlibat penyebab umum ganggunan endokrin adalah kelenje-kelenjer ini memproduksi terlalu banyak atau terlalu sedikit hormon menyiratkan ketidakseimbangan hormon endokrin berikut jenis penyakit endokrin
+            </p>
+        </div>
 
 	</div>
 </body>
