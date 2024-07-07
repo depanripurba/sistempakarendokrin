@@ -128,6 +128,8 @@ class Diagnosa extends CI_Controller
             $hasildiagnosakirim['solusi'] = $ektrak->solusi;
             $hasildiagnosakirim['nilaipeluang'] = $values;
             $hasildiagnosakirim['persenpeluang'] = $values * 100;
+            $hasildiagnosakirim['nama'] = $_POST['nama'];
+            $hasildiagnosakirim['alamat'] = $_POST['alamat'];
             break;
         }
         $hasildiagnosakirim['gejalacentang'] = $gejalacentang;
