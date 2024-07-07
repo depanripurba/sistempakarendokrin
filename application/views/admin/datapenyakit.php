@@ -56,7 +56,7 @@
                                                 </td>
                                                 <td>
                                                     <a class="btn btn-success" href="<?= base_url('editpenyakit/') ?><?= $data->kode_penyakit ?>">Edit</a>
-                                                    <button data-url="<?= base_url('hapuspenyakit/' . $data->kode_penyakit) ?>" id="hapusdata" class="btn btn-danger">Delete</button> 
+                                                    <button data-url="<?= base_url('hapuspenyakit/' . $data->kode_penyakit) ?>" id="hapusdata" class="btn btn-danger">Hapus</button> 
                                                 </td>
                                                 <?php $nomor++ ?>
                                             <?php endforeach ?>

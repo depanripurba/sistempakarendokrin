@@ -48,7 +48,7 @@
                 <td style="width: 200px;">
                   <a class="btn btn-success" href="<?= base_url('editbasis/') . $b->id ?>">Edit</a>
                   <button data-url="<?= base_url('hapusbasis/' . $b->id) ?>" id="hapusdata" class="btn btn-danger">
-                    Delete
+                    Hapus
                   </button>
                 </td>
               </tr>

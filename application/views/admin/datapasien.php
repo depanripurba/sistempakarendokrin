@@ -42,7 +42,7 @@
                                         <td><?=$p['alamat']?></td>
                                         <td>
                                             <a onclick='confirm("Apakah Anda Ingin Menghapus Data Pasien ini?")' href='<?=base_url('master/delete_pasien/'.$p['id'])?>' class="btn btn-danger">
-                                                <span>Delete</span>
+                                                <span>Hapus</span>
                                             </a>
                                         </td>
                                     </tr>

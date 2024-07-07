@@ -40,7 +40,7 @@
                                         <a class="btn btn-success"
                                             href="<?=site_url('Master/ubahdatagejala/'.$item['kode_gejala'])?>">Edit</a>
                                         <a class="btn btn-danger" onclick="alert('Yakin Ingin Menghapus Data ini?')"
-                                            href="<?=site_url('Master/deleteGejala/'.$item['kode_gejala'])?>">Delete</a>
+                                            href="<?=site_url('Master/deleteGejala/'.$item['kode_gejala'])?>">Hapus</a>
                                     </td>
 
                                 </tr>
