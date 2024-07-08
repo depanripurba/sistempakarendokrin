@@ -28,7 +28,7 @@
                                 <tr>
                                     <th>Kode Gejala</th>
                                     <th>Nama Gejala</th>
-                                    <th style="width: 200px;">Action</th>
+                                    <th style="width: 200px;">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -38,9 +38,9 @@
                                     <td><?=$item['nama_gejala']?></td>
                                     <td>
                                         <a class="btn btn-success"
-                                            href="<?=site_url('Master/ubahdatagejala/'.$item['kode_gejala'])?>">Edit</a>
+                                            href="<?=site_url('Master/ubahdatagejala/'.$item['kode_gejala'])?>">Ubah</a>
                                         <a class="btn btn-danger" onclick="alert('Yakin Ingin Menghapus Data ini?')"
-                                            href="<?=site_url('Master/deleteGejala/'.$item['kode_gejala'])?>">Delete</a>
+                                            href="<?=site_url('Master/deleteGejala/'.$item['kode_gejala'])?>">Hapus</a>
                                     </td>
 
                                 </tr>
