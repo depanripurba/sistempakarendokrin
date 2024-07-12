@@ -36,8 +36,6 @@ class Diagnosa extends CI_Controller
         }
         // bagian tambah data pasien
         $data_to_register = [
-            "username" => "user",
-            "password" => "password",
             "fullname" => $_POST['nama'],
             "usia" => $_POST['usia'],
             "jenis_kelamin" => $_POST['jeniskelamin'],
