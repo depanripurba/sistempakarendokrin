@@ -28,7 +28,7 @@ class Master extends CI_Controller
 		$data['gejala'] = $this->db->count_all_results();
 		$this->db->from('tbl_penyakit');
 		$data['penyakit'] = $this->db->count_all_results();
-		$this->db->from('tbl_pasien');
+		$this->db->from('tbl_diagnosa');
 		$data['pasien'] = $this->db->count_all_results();
 
 		$this->load->view('template/header',$data);
