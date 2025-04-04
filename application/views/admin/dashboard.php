@@ -12,52 +12,65 @@
                 </div><!-- /.container-fluid -->
             </div>
             <div class="row">
-                <div class="col-4">
+                <div class="col-3">
                     <div class="small-box bg-warning">
                         <div class="inner">
-                            <h3><?=$gejala?></h3>
-                            <p>Data Gejala</p>
+                            <h3><?= $penyakit ?></h3>
+                            <p>Data Penyakit</p>
                         </div>
                         <div class="icon">
                             <i class="fas fa-book-medical"></i>
                         </div>
-                        <a href="<?=base_url('master/datagejala')?>" class="small-box-footer">More info <i
-                                class="fas fa-arrow-circle-right"></i></a>
+                        <a href="<?= base_url('master/datagejala') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                     <div class="small-box bg-danger">
                         <div class="inner">
-                            <h3><?=$penyakit?></h3>
-                            <p>Data Penyakit</p>
+                            <h3><?= $gejala ?></h3>
+                            <p>Data Gejala</p>
                         </div>
                         <div class="icon">
                             <i class="fas fa-notes-medical"></i>
                         </div>
-                        <a href="<?=base_url('master/datapenyakit')?>" class="small-box-footer">More info <i
-                                class="fas fa-arrow-circle-right"></i></a>
+                        <a href="<?= base_url('master/datapenyakit') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                     <div class="small-box bg-info">
                         <div class="inner">
-                            <h3><?=$pasien?></h3>
-                            <p>Data Pengunjung</p>
+                            <h3><?= $pengetahuan ?></h3>
+                            <p>Total Pengetahuan</p>
                         </div>
                         <div class="icon">
                             <i class="nav-icon fas fa-user-injured"></i>
                         </div>
-                        <a href="<?=base_url('master/datapasien')?>" class="small-box-footer">More info <i
-                                class="fas fa-arrow-circle-right"></i></a>
+                        <a href="<?= base_url('master/datapasien') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="small-box bg-primary">
+                        <div class="inner">
+                            <h3><?= $pasien ?></h3>
+                            <p>Data Pengguna</p>
+                        </div>
+                        <div class="icon">
+                            <i class="nav-icon fas fa-user-injured"></i>
+                        </div>
+                        <a href="<?= base_url('master/datapasien') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-2">
-                    <a href="<?=base_url('master/diagnosa')?>" class="btn btn-primary btn-block" fdprocessedid="ral5ij">
-                        <i class="fas fa-user-md mr-2"></i>
-                        <span>Mulai Konsultasi</span>
-                    </a>
+            <div class="body pb-3">
+                <div class="page rounded pb-3">
+                    <div class="center p-3">
+                        <center>
+                            <h2>
+                                <p class="center-text" style="color:#3b51e0">Selamat Datang Di Aplikasi Sistem Pakar Mendiagnosa Penyakit
+                                    Pada Tanaman Wortel (Daucus Carola)</p>
+                        </center>
+                        </h2>
+                    </div>
                 </div>
             </div>
         </div>

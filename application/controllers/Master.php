@@ -22,7 +22,7 @@ class Master extends CI_Controller
 	public function index()
 	{
 		$data['aktif'] = 'home';
-		$data['judul'] = 'SP Theorema Bayes Endokrin - Dashboard';
+		$data['judul'] = 'Sistem Pakar Diagnosa Wortel - Dashboard';
 		// NumRows
 		$this->db->from('tbl_gejala');
 		$data['gejala'] = $this->db->count_all_results();
@@ -30,6 +30,8 @@ class Master extends CI_Controller
 		$data['penyakit'] = $this->db->count_all_results();
 		$this->db->from('tbl_diagnosa');
 		$data['pasien'] = $this->db->count_all_results();
+		$this->db->from('tbl_basispengetahuan');
+		$data['pengetahuan'] = $this->db->count_all_results();
 
 		$this->load->view('template/header',$data);
 		$this->load->view('template/sidebar', $data);

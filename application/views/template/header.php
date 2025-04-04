@@ -27,12 +27,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 height="60">
         </div>
 
-        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+        <nav style="z-index:9999" class="main-header navbar navbar-expand navbar-white navbar-light">
             <!-- Left navbar links -->
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
+                <li class="center"><h2 style="margin-left:350px;"><a href="<?=base_url()?>">Sistem Pakar</a></h2></li>
             </ul>
 
             <!-- Right navbar links -->

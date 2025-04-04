@@ -24,7 +24,13 @@ class Auth extends CI_Controller
 		$this->form_validation->set_rules('password', 'Password', 'required|trim');
 
 		if ($this->form_validation->run() == false) {
-			$this->load->view('admin/login',$data);
+			$data['judul'] = 'SISTEM PAKAR WORTEL';
+			$data['user'] = $this->session->userdata();
+			$data['aktif'] = 'Dashboard Pasien';
+			$this->load->view('template/header', $data);
+			$this->load->view('template/sidebar', $data);
+			$this->load->view('user/login', $data);
+			$this->load->view('template/footer', $data);
 		} else {
 			$this->_login();
 		}

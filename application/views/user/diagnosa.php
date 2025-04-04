@@ -15,21 +15,6 @@
                                     <label for="kode_gejala">Nama</label>
                                     <input required type="text" name="nama" id="nama" class="form-control" placeholder="Nama...">
                                 </div>
-                                <div class="form-group">
-                                    <label for="nama_gejala">Usia</label>
-                                    <input required name="usia" type="text" class="form-control" id="nama_gejala" placeholder="Usia...">
-                                </div>
-                                <div class="form-group">
-                                    <label for="nama_gejala">Jenis Kelamin</label>
-                                    <select class="form-control" name="jeniskelamin" id="">
-                                        <option value="Laki-laki">Laki-laki</option>
-                                        <option value="Perempuan">Perempuan</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="nama_gejala">Alamat</label>
-                                    <input required name="alamat" type="text" class="form-control" id="nama_gejala" placeholder="Alamat...">
-                                </div>
                             </div>
                             <!-- end bagian identitas user -->
                             <div class="card-header">

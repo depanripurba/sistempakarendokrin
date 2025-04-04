@@ -1,58 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="<?= base_url('assets/css/style.css') ?>">
-	<link rel="shortcut icon" href="<?= base_url('assets/img/logo.png') ?>" type="image/x-icon">
-	<title><?= $judul ?></title>
-</head>
+<link rel="stylesheet" href="<?=base_url('assets/css/style.css')?>">
 <style>
-	body {
-		background-image: url('<?= base_url('assets/img/bg.png') ?>');
-		background-repeat: no-repeat;
-		background-size: cover;
-		width: 100%;
-		font-family: 'Poppins', sans-serif;
-	}
-
-	.tombol {
-		color: white !important;
-		border: 1px solid white;
-	}
-
-	.sidee {
-		display: flex;
-		gap: 10px;
-		flex-direction: row;
-	}
+.bod {
+    background-image: url('<?=base_url('assets/img/bg.png')?>');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
 </style>
+<link rel="stylesheet" href="style.css">
 
-<body>
-	<div class="mask">
-		<div class="header">
-			<div class="header-brand">
-				<img class="logo" src="<?= base_url('assets/img/logo.png') ?>" alt="">
-				<p class="header-text">SISTEM PAKAR ENDOKRIN</p>
-			</div>
-			<div class="sidee">
-				<a class="tombol" href="<?= base_url('user/info') ?>">INFORMASI</a>
-				<a class="tombol" href="<?= base_url('user/diagnosa') ?>">DIAGNOSA</a>
-				<a class="tombol" href="<?= base_url('login') ?>">LOGIN ADMIN</a>
-			</div>
+<div class="content-wrapper">
+    <!-- batas -->
+    <section class="content">
+        <div class="container-fluid">
 
-		</div>
-		<div class="center">
-			<p class="center-text">Selamat Datang Di Website</p>
-			<br>
-			<p class="center-text">Sistem Pakar Dalam Mendiagnosa Penyakit Endokrin Pada Manusia Menggunakan<br>Metode Teorema Bayes (Studi Kasus :<br>Mitra Sejati Medan)</p>
-			<a style="margin-left: -1000px;" class="button-diagnosa" href="<?= base_url('user/diagnosa') ?>">
-				<span>MULAI MENDIAGNOSA</span>
-			</a>
-		</div>
+            <!-- content -->
 
-	</div>
-</body>
 
-</html>
+            <div class="body pb-3">
+                <div class="page rounded pb-3">
+                    <div class="center">
+                        <p class="center-text" style="color:#3b51e0">Selamat Datang Di Aplikasi Sistem Pakar Mendiagnosa Penyakit
+                            Pada Tanaman Wortel</p>
+                        <a style="margin-left:800px;margin-top:100px;" class="button-diagnosa" href="<?=base_url('auth')?>">
+                            <span>Login</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- content -->
+
+        </div>
+    </section>
+</div>
+<!-- /.content-wrapper -->

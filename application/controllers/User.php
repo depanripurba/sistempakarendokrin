@@ -13,8 +13,14 @@ class User extends CI_Controller
 	}
 
 	public function index(){
-		$data['judul']='SISTEM PAKAR DIAGNOSA ENDOKRIN - HOME';
+		$data['judul']='SISTEM PAKAR WORTEL';
+		$data['user']=$this->session->userdata();
+		$data['aktif']='Dashboard Pasien';
+		$this->load->view('template/header',$data);
+		$this->load->view('template/sidebar',$data);
 		$this->load->view('user/home',$data);
+		$this->load->view('template/footer',$data);
+
 	}
 
 	public function dashboard(){ 
@@ -35,14 +41,14 @@ class User extends CI_Controller
 
 	public function diagnosa(){
 
-		$data['judul']='SISTEM PAKAR DIAGNOSA ENDOKRIN - DIAGNOSA USER';
+		$data['judul']='Sistem Pakar Diagnosa Penyakit Wortel';
 		$data['aktif']='Diagnosa Pasien';
 		$data['user']=$this->session->userdata();
 		$data['gejala'] = $this->Gejala_model->getAllGejala();
-		$this->load->view('user/template/header',$data);
-		$this->load->view('user/template/sidebar',$data);
+		$this->load->view('template/header',$data);
+		$this->load->view('template/sidebar',$data);
 		$this->load->view('user/diagnosa',$data);
-		$this->load->view('user/template/footer',$data);
+		$this->load->view('template/footer',$data);
 	}
 
 	public function login(){

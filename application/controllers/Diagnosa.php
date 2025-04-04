@@ -36,10 +36,7 @@ class Diagnosa extends CI_Controller
         }
         // bagian tambah data pasien
         $data_to_register = [
-            "fullname" => $_POST['nama'],
-            "usia" => $_POST['usia'],
-            "jenis_kelamin" => $_POST['jeniskelamin'],
-            "alamat" => $_POST['alamat'],
+            "fullname" => $_POST['nama']
         ];
 
         $this->Pasien_model->insertData($data_to_register);
@@ -127,7 +124,6 @@ class Diagnosa extends CI_Controller
             $hasildiagnosakirim['nilaipeluang'] = $values;
             $hasildiagnosakirim['persenpeluang'] = $values * 100;
             $hasildiagnosakirim['nama'] = $_POST['nama'];
-            $hasildiagnosakirim['alamat'] = $_POST['alamat'];
             break;
         }
         $hasildiagnosakirim['gejalacentang'] = $gejalacentang;
@@ -144,16 +140,15 @@ class Diagnosa extends CI_Controller
 
         $this->session->set_userdata('hasildiagnosa', $hasildiagnosakirim);
 
-        $propertiview['judul'] = 'SISTEM PAKAR DIAGNOSA ENDOKRIN - DIAGNOSA USER';
+        $propertiview['judul'] = 'Sistem Pakar Diagnosa Penyakit Wortel';
         $propertiview['aktif'] = 'Diagnosa Pasien';
         $propertiview['hasil'] = $hasildiagnosakirim;
         $propertiview['nama'] = $_POST['nama'];
-        $propertiview['alamat'] = $_POST['alamat'];
         $propertiview['user'] = $this->session->userdata();
-        $this->load->view('user/template/header', $propertiview);
-        $this->load->view('user/template/sidebar', $propertiview);
+        $this->load->view('template/header', $propertiview);
+        $this->load->view('template/sidebar', $propertiview);
         $this->load->view('user/hasildiagnosa', $propertiview);
-        $this->load->view('user/template/footer', $propertiview);
+        $this->load->view('template/footer', $propertiview);
     }
 
     private function forwadchaining($newdata)
